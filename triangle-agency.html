@@ -1,0 +1,2335 @@
+<div class="triangle-sheet">
+  <input id="triangle-tab-identity" type="radio" class="tab-toggle" name="attr_sheet_tab" value="identity" checked>
+  <input id="triangle-tab-abilities" type="radio" class="tab-toggle" name="attr_sheet_tab" value="abilities">
+  <input id="triangle-tab-relationships" type="radio" class="tab-toggle" name="attr_sheet_tab" value="relationships">
+  <input id="triangle-tab-benefits" type="radio" class="tab-toggle" name="attr_sheet_tab" value="benefits">
+  <input id="triangle-tab-balance" type="radio" class="tab-toggle" name="attr_sheet_tab" value="balance">
+  <input id="triangle-tab-intake" type="radio" class="tab-toggle" name="attr_sheet_tab" value="intake">
+  <input id="triangle-tab-post-mission" type="radio" class="tab-toggle" name="attr_sheet_tab" value="post_mission">
+  <div class="tab-strip">
+    <label class="tab-label" for="triangle-tab-identity">Identity</label>
+    <label class="tab-label" for="triangle-tab-abilities">Abilities</label>
+    <label class="tab-label" for="triangle-tab-relationships">Relationships</label>
+    <label class="tab-label" for="triangle-tab-benefits">Benefits</label>
+    <label class="tab-label" for="triangle-tab-balance">Balance</label>
+    <label class="tab-label" for="triangle-tab-intake">Intake</label>
+    <label class="tab-label" for="triangle-tab-post-mission">Post-Mission</label>
+  </div>
+
+  <div class="tab-panel identity-panel">
+    <div class="tab-paper">
+    <div class="identity-layout">
+      <div class="identity-top-row">
+        <div class="identity-agent-card">
+          <div class="identity-field-grid">
+            
+    <label class="field">
+      <span>Character Name</span>
+      <input type="text" name="attr_character_name" >
+    </label>
+            
+    <label class="field">
+      <span>Pronouns</span>
+      <input type="text" name="attr_pronouns" >
+    </label>
+            
+    <label class="field">
+      <span>Agency Title</span>
+      <input type="text" name="attr_agency_title" >
+    </label>
+            
+    <label class="field">
+      <span>Agency Standing</span>
+      <input type="text" name="attr_agency_standing" >
+    </label>
+          </div>
+        </div>
+        <div class="identity-arc-card">
+          
+    <div class="arc-picker arc-anomaly">
+      <span class="arc-mark"><span>A</span></span>
+      <div class="arc-fields">
+        <span class="arc-name">Anomaly</span>
+        <div class="arc-writein">
+          <select name="attr_anomaly_id" aria-label="Anomaly"><option value="">Select anomaly</option>
+<option value="whisper">Whisper</option>
+<option value="timepiece">Timepiece</option>
+<option value="manifold">Manifold</option>
+<option value="gun">Gun</option>
+<option value="growth">Growth</option>
+<option value="dream">Dream</option>
+<option value="drain">Drain</option>
+<option value="catalogue">Catalogue</option>
+<option value="absence">Absence</option></select>
+        </div>
+      </div>
+    </div>
+          
+    <div class="arc-picker arc-reality">
+      <span class="arc-mark"><span>R</span></span>
+      <div class="arc-fields">
+        <span class="arc-name">Reality</span>
+        <div class="arc-writein">
+          <select name="attr_reality_id" aria-label="Reality"><option value="">Select reality</option>
+<option value="caretaker">Caretaker</option>
+<option value="overbooked">Overbooked</option>
+<option value="pursued">Pursued</option>
+<option value="star">Star</option>
+<option value="struggling">Struggling</option>
+<option value="newborn">Newborn</option>
+<option value="romantic">Romantic</option>
+<option value="backbone">Backbone</option>
+<option value="creature">Creature</option></select>
+        </div>
+      </div>
+    </div>
+          
+    <div class="arc-picker arc-competency">
+      <span class="arc-mark"><span>C</span></span>
+      <div class="arc-fields">
+        <span class="arc-name">Competency</span>
+        <div class="arc-writein">
+          <select name="attr_competency_id" aria-label="Competency"><option value="">Select competency</option>
+<option value="barista">Barista</option>
+<option value="ceo">CEO</option>
+<option value="clown">Clown</option>
+<option value="gravedigger">Gravedigger</option>
+<option value="hotline">Hotline</option>
+<option value="intern">Intern</option>
+<option value="pr">PR</option>
+<option value="randd">R&amp;D</option>
+<option value="reception">Reception</option></select>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="identity-lower-layout">
+        <div class="identity-left-column">
+          <div class="card identity-metrics-card">
+            <div class="mission-metrics">
+              
+    <label class="metric-row metric-commendations" data-google-icon="workspace_premium">
+      <span class="metric-icon material-symbols-outlined" aria-hidden="true" title="google material symbols: workspace_premium">workspace_premium</span>
+      <span class="metric-writein"><input type="text" name="attr_commendations" inputmode="numeric" pattern="[0-9]*"></span>
+      <span class="metric-label">Commendations</span>
+    </label>
+              
+    <label class="metric-row metric-demerits" data-google-icon="gavel">
+      <span class="metric-icon material-symbols-outlined" aria-hidden="true" title="google material symbols: gavel">gavel</span>
+      <span class="metric-writein"><input type="text" name="attr_demerits" inputmode="numeric" pattern="[0-9]*"></span>
+      <span class="metric-label">Demerits</span>
+    </label>
+              
+    <label class="metric-row metric-burnout" data-google-icon="local_fire_department">
+      <span class="metric-icon material-symbols-outlined" aria-hidden="true" title="google material symbols: local_fire_department">local_fire_department</span>
+      <span class="metric-writein"><input type="text" name="attr_additional_burnout" inputmode="numeric" pattern="[0-9]*"></span>
+      <span class="metric-label">Additional Burnout</span>
+    </label>
+            </div>
+          </div>
+          <div class="identity-rules-flow">
+            <div class="identity-reality-card identity-rule-group">
+              
+    <div class="field readonly identity-rule-block">
+      <span>Reality Trigger</span>
+      <span class="readonly-value" name="attr_reality_trigger_display"></span>
+    </div>
+              
+    <div class="field readonly identity-rule-block">
+      <span>Burnout Release</span>
+      <span class="readonly-value" name="attr_burnout_release_display"></span>
+    </div>
+            </div>
+            <div class="identity-competency-card identity-rule-group">
+              
+    <div class="field readonly identity-rule-block">
+      <span>Prime Directive</span>
+      <span class="readonly-value" name="attr_prime_directive_display"></span>
+    </div>
+              
+    <div class="sanctioned-behaviors identity-rule-block readonly field">
+      <span>Sanctioned Behaviors</span>
+      <p class="sanctioned-intro">Receive 1 Commendation when you do one of these:</p>
+      <ul class="sanctioned-list">
+        
+          <li><span class="sanctioned-arrow" aria-hidden="true"></span><span class="readonly-value" name="attr_sanctioned_behavior_1_display"></span></li>
+        
+          <li><span class="sanctioned-arrow" aria-hidden="true"></span><span class="readonly-value" name="attr_sanctioned_behavior_2_display"></span></li>
+        
+          <li><span class="sanctioned-arrow" aria-hidden="true"></span><span class="readonly-value" name="attr_sanctioned_behavior_3_display"></span></li>
+      </ul>
+      <p class="sanctioned-bonus">If you do all 3 in a single mission, receive 3 bonus commendations.</p>
+    </div>
+            </div>
+          </div>
+        </div>
+        <div class="identity-right-column">
+          <div class="card identity-quality-card">
+            <h2>Quality Assurances</h2>
+            
+      <div class="quality-row">
+        <div class="quality-name">Attentiveness</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_attentiveness_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Attentiveness max">
+        </label>
+        <div class="qa-current-track" aria-label="Attentiveness current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="1" aria-label="Attentiveness current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="2" aria-label="Attentiveness current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="3" aria-label="Attentiveness current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="4" aria-label="Attentiveness current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="5" aria-label="Attentiveness current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="6" aria-label="Attentiveness current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="7" aria-label="Attentiveness current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="8" aria-label="Attentiveness current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_attentiveness_current" value="9" aria-label="Attentiveness current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Duplicity</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_duplicity_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Duplicity max">
+        </label>
+        <div class="qa-current-track" aria-label="Duplicity current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="1" aria-label="Duplicity current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="2" aria-label="Duplicity current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="3" aria-label="Duplicity current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="4" aria-label="Duplicity current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="5" aria-label="Duplicity current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="6" aria-label="Duplicity current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="7" aria-label="Duplicity current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="8" aria-label="Duplicity current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_duplicity_current" value="9" aria-label="Duplicity current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Dynamism</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_dynamism_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Dynamism max">
+        </label>
+        <div class="qa-current-track" aria-label="Dynamism current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="1" aria-label="Dynamism current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="2" aria-label="Dynamism current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="3" aria-label="Dynamism current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="4" aria-label="Dynamism current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="5" aria-label="Dynamism current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="6" aria-label="Dynamism current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="7" aria-label="Dynamism current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="8" aria-label="Dynamism current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_dynamism_current" value="9" aria-label="Dynamism current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Empathy</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_empathy_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Empathy max">
+        </label>
+        <div class="qa-current-track" aria-label="Empathy current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="1" aria-label="Empathy current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="2" aria-label="Empathy current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="3" aria-label="Empathy current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="4" aria-label="Empathy current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="5" aria-label="Empathy current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="6" aria-label="Empathy current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="7" aria-label="Empathy current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="8" aria-label="Empathy current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_empathy_current" value="9" aria-label="Empathy current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Initiative</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_initiative_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Initiative max">
+        </label>
+        <div class="qa-current-track" aria-label="Initiative current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="1" aria-label="Initiative current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="2" aria-label="Initiative current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="3" aria-label="Initiative current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="4" aria-label="Initiative current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="5" aria-label="Initiative current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="6" aria-label="Initiative current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="7" aria-label="Initiative current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="8" aria-label="Initiative current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_initiative_current" value="9" aria-label="Initiative current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Persistence</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_persistence_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Persistence max">
+        </label>
+        <div class="qa-current-track" aria-label="Persistence current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="1" aria-label="Persistence current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="2" aria-label="Persistence current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="3" aria-label="Persistence current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="4" aria-label="Persistence current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="5" aria-label="Persistence current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="6" aria-label="Persistence current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="7" aria-label="Persistence current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="8" aria-label="Persistence current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_persistence_current" value="9" aria-label="Persistence current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Presence</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_presence_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Presence max">
+        </label>
+        <div class="qa-current-track" aria-label="Presence current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="1" aria-label="Presence current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="2" aria-label="Presence current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="3" aria-label="Presence current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="4" aria-label="Presence current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="5" aria-label="Presence current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="6" aria-label="Presence current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="7" aria-label="Presence current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="8" aria-label="Presence current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_presence_current" value="9" aria-label="Presence current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Professionalism</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_professionalism_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Professionalism max">
+        </label>
+        <div class="qa-current-track" aria-label="Professionalism current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="1" aria-label="Professionalism current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="2" aria-label="Professionalism current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="3" aria-label="Professionalism current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="4" aria-label="Professionalism current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="5" aria-label="Professionalism current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="6" aria-label="Professionalism current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="7" aria-label="Professionalism current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="8" aria-label="Professionalism current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_professionalism_current" value="9" aria-label="Professionalism current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="quality-row">
+        <div class="quality-name">Subtlety</div>
+        <label class="qa-max">
+          <span class="qa-max-triangle"></span>
+          <span class="qa-max-label">MAX</span>
+          <input type="text" name="attr_subtlety_max" inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Subtlety max">
+        </label>
+        <div class="qa-current-track" aria-label="Subtlety current">
+          
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="1" aria-label="Subtlety current 1">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="2" aria-label="Subtlety current 2">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="3" aria-label="Subtlety current 3">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="4" aria-label="Subtlety current 4">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="5" aria-label="Subtlety current 5">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="6" aria-label="Subtlety current 6">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="7" aria-label="Subtlety current 7">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="8" aria-label="Subtlety current 8">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+          <label class="qa-current-option">
+            <input type="radio" name="attr_subtlety_current" value="9" aria-label="Subtlety current 9">
+            <span class="qa-current-triangle" aria-hidden="true"></span>
+          </label>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="tab-panel abilities-panel">
+    <div class="tab-paper">
+    
+    <div class="abilities-header">
+      <h2>Anomaly Abilities</h2>
+      <div class="abilities-anomaly-block">
+        <div class="abilities-anomaly-summary arc-picker arc-anomaly">
+          <span class="arc-mark"><span>A</span></span>
+          <div class="arc-fields">
+            <span class="arc-name anomaly-profile-label"><span class="warped-text"><span class="warp-letter warp-letter-1" style="transform:rotate(-7deg) translateY(1px)">A</span><span class="warp-letter warp-letter-2" style="transform:rotate(4deg) translateY(-1px)">n</span><span class="warp-letter warp-letter-3" style="transform:rotate(-3deg) translateY(1px)">o</span><span class="warp-letter warp-letter-4" style="transform:rotate(5deg) translateY(-2px)">m</span><span class="warp-letter warp-letter-5" style="transform:rotate(-5deg) translateY(1px)">a</span><span class="warp-letter warp-letter-6" style="transform:rotate(3deg) translateY(-1px)">l</span><span class="warp-letter warp-letter-7" style="transform:rotate(-2deg) translateY(1px)">y</span></span></span>
+            <div class="arc-writein">
+              <span class="anomaly-profile-name" name="attr_anomaly_name_display"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card blue anomaly-profile-card">
+      <div class="field readonly anomaly-description-field">
+        <span class="anomaly-description-heading" name="attr_anomaly_name_display"></span>
+        <span class="readonly-value" name="attr_anomaly_description_display"></span>
+      </div>
+    </div>
+    
+      <div class="card ability-card">
+        <h2 class="ability-title"><span class="ability-name" name="attr_ability_1_name"></span><span class="ability-quality-badge"><input type="text" class="ability-quality-value" name="attr_ability_1_quality_display" readonly tabindex="-1" aria-label="Ability 1 quality"><span class="ability-quality-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span></span><button type="action" name="act_ability_1_roll" class="ability-invoke-button">Invoke</button></h2>
+        <input type="hidden" name="attr_ability_1_quality">
+        <input type="hidden" name="attr_ability_1_quality_attr">
+        <input type="hidden" name="attr_ability_1_burnout" value="0">
+        
+    <div class="ability-rules">
+      <span class="field-title">Rules</span>
+      <span class="ability-setup" name="attr_ability_1_setup"></span>
+
+      <div class="ability-outcome outcome-success">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_1_success_label">On a success,</strong> <span class="outcome-text" name="attr_ability_1_success_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-additional">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_1_additional_label">For each additional 3,</strong> <span class="outcome-text" name="attr_ability_1_additional_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-triscendence">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_1_triscendence_label">Triscendence</strong> <span class="outcome-text" name="attr_ability_1_triscendence_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-failure">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_1_failure_label">On a failure,</strong> <span class="outcome-text" name="attr_ability_1_failure_text"></span></p>
+      </div>
+    </div>
+        
+    <div class="known-question">
+      <span class="known-note" name="attr_ability_1_question_note"></span>
+      <div class="known-grid">
+        <div class="known-prompt"><span class="known-label">Q:</span><span name="attr_ability_1_question_prompt"></span></div>
+        <div class="ability-meta">
+          <label class="ability-practiced"><span>Practiced?</span><input type="checkbox" name="attr_ability_1_practiced"></label>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_1_answer_1"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_1_answer_1_mark_1" aria-label="Ability 1 answer 1 mark 1">
+            <input type="checkbox" name="attr_ability_1_answer_1_mark_2" aria-label="Ability 1 answer 1 mark 2">
+            <input type="checkbox" name="attr_ability_1_answer_1_mark_3" aria-label="Ability 1 answer 1 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_1_answer_1_code"></span>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_1_answer_2"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_1_answer_2_mark_1" aria-label="Ability 1 answer 2 mark 1">
+            <input type="checkbox" name="attr_ability_1_answer_2_mark_2" aria-label="Ability 1 answer 2 mark 2">
+            <input type="checkbox" name="attr_ability_1_answer_2_mark_3" aria-label="Ability 1 answer 2 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_1_answer_2_code"></span>
+        </div>
+      </div>
+    </div>
+      </div>
+
+      <div class="card ability-card">
+        <h2 class="ability-title"><span class="ability-name" name="attr_ability_2_name"></span><span class="ability-quality-badge"><input type="text" class="ability-quality-value" name="attr_ability_2_quality_display" readonly tabindex="-1" aria-label="Ability 2 quality"><span class="ability-quality-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span></span><button type="action" name="act_ability_2_roll" class="ability-invoke-button">Invoke</button></h2>
+        <input type="hidden" name="attr_ability_2_quality">
+        <input type="hidden" name="attr_ability_2_quality_attr">
+        <input type="hidden" name="attr_ability_2_burnout" value="0">
+        
+    <div class="ability-rules">
+      <span class="field-title">Rules</span>
+      <span class="ability-setup" name="attr_ability_2_setup"></span>
+
+      <div class="ability-outcome outcome-success">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_2_success_label">On a success,</strong> <span class="outcome-text" name="attr_ability_2_success_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-additional">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_2_additional_label">For each additional 3,</strong> <span class="outcome-text" name="attr_ability_2_additional_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-triscendence">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_2_triscendence_label">Triscendence</strong> <span class="outcome-text" name="attr_ability_2_triscendence_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-failure">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_2_failure_label">On a failure,</strong> <span class="outcome-text" name="attr_ability_2_failure_text"></span></p>
+      </div>
+    </div>
+        
+    <div class="known-question">
+      <span class="known-note" name="attr_ability_2_question_note"></span>
+      <div class="known-grid">
+        <div class="known-prompt"><span class="known-label">Q:</span><span name="attr_ability_2_question_prompt"></span></div>
+        <div class="ability-meta">
+          <label class="ability-practiced"><span>Practiced?</span><input type="checkbox" name="attr_ability_2_practiced"></label>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_2_answer_1"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_2_answer_1_mark_1" aria-label="Ability 2 answer 1 mark 1">
+            <input type="checkbox" name="attr_ability_2_answer_1_mark_2" aria-label="Ability 2 answer 1 mark 2">
+            <input type="checkbox" name="attr_ability_2_answer_1_mark_3" aria-label="Ability 2 answer 1 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_2_answer_1_code"></span>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_2_answer_2"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_2_answer_2_mark_1" aria-label="Ability 2 answer 2 mark 1">
+            <input type="checkbox" name="attr_ability_2_answer_2_mark_2" aria-label="Ability 2 answer 2 mark 2">
+            <input type="checkbox" name="attr_ability_2_answer_2_mark_3" aria-label="Ability 2 answer 2 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_2_answer_2_code"></span>
+        </div>
+      </div>
+    </div>
+      </div>
+
+      <div class="card ability-card">
+        <h2 class="ability-title"><span class="ability-name" name="attr_ability_3_name"></span><span class="ability-quality-badge"><input type="text" class="ability-quality-value" name="attr_ability_3_quality_display" readonly tabindex="-1" aria-label="Ability 3 quality"><span class="ability-quality-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span></span><button type="action" name="act_ability_3_roll" class="ability-invoke-button">Invoke</button></h2>
+        <input type="hidden" name="attr_ability_3_quality">
+        <input type="hidden" name="attr_ability_3_quality_attr">
+        <input type="hidden" name="attr_ability_3_burnout" value="0">
+        
+    <div class="ability-rules">
+      <span class="field-title">Rules</span>
+      <span class="ability-setup" name="attr_ability_3_setup"></span>
+
+      <div class="ability-outcome outcome-success">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_3_success_label">On a success,</strong> <span class="outcome-text" name="attr_ability_3_success_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-additional">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_3_additional_label">For each additional 3,</strong> <span class="outcome-text" name="attr_ability_3_additional_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-triscendence">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_3_triscendence_label">Triscendence</strong> <span class="outcome-text" name="attr_ability_3_triscendence_text"></span></p>
+      </div>
+
+      <div class="ability-outcome outcome-failure">
+        <span class="outcome-icon" aria-hidden="true"></span>
+        <p><strong name="attr_ability_3_failure_label">On a failure,</strong> <span class="outcome-text" name="attr_ability_3_failure_text"></span></p>
+      </div>
+    </div>
+        
+    <div class="known-question">
+      <span class="known-note" name="attr_ability_3_question_note"></span>
+      <div class="known-grid">
+        <div class="known-prompt"><span class="known-label">Q:</span><span name="attr_ability_3_question_prompt"></span></div>
+        <div class="ability-meta">
+          <label class="ability-practiced"><span>Practiced?</span><input type="checkbox" name="attr_ability_3_practiced"></label>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_3_answer_1"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_3_answer_1_mark_1" aria-label="Ability 3 answer 1 mark 1">
+            <input type="checkbox" name="attr_ability_3_answer_1_mark_2" aria-label="Ability 3 answer 1 mark 2">
+            <input type="checkbox" name="attr_ability_3_answer_1_mark_3" aria-label="Ability 3 answer 1 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_3_answer_1_code"></span>
+        </div>
+
+        <div class="known-answer">
+          <span class="known-label">A:</span>
+          <span class="known-answer-text" name="attr_ability_3_answer_2"></span>
+          <span class="known-track">
+            <span class="known-track-arrow material-symbols-outlined" aria-hidden="true" title="google material symbols: arrow_forward">arrow_forward</span>
+            <input type="checkbox" name="attr_ability_3_answer_2_mark_1" aria-label="Ability 3 answer 2 mark 1">
+            <input type="checkbox" name="attr_ability_3_answer_2_mark_2" aria-label="Ability 3 answer 2 mark 2">
+            <input type="checkbox" name="attr_ability_3_answer_2_mark_3" aria-label="Ability 3 answer 2 mark 3">
+          </span>
+          <span class="known-code" name="attr_ability_3_answer_2_code"></span>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-panel relationships-panel">
+    <div class="tab-paper">
+    <div class="sheet-section relationships-section">
+      <h2>Relationships</h2>
+      
+    <div class="relationships-header">
+      <div class="networked-relationships-summary">
+        <span class="networked-summary-icon material-symbol" title="google material symbols: language" aria-hidden="true">language</span>
+        <span class="networked-summary-label">Networked Relationships</span>
+        <span class="networked-summary-count" name="attr_networked_relationships_count"></span>
+      </div>
+      <div class="relationships-reality-summary arc-picker arc-reality">
+        <span class="arc-mark"><span>R</span></span>
+        <div class="arc-fields">
+          <span class="arc-name">Reality</span>
+          <div class="arc-writein">
+            <span class="relationship-reality-name" name="attr_reality_name_display"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="relationships-grid">
+        
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_1_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_1_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_1_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_1_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_1_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_1_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_1_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_1_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_1_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_1_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_1_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_1_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_1_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_1_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_1_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_1_active"><span>Active</span></label>
+      </div>
+    </div>
+
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_2_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_2_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_2_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_2_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_2_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_2_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_2_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_2_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_2_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_2_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_2_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_2_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_2_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_2_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_2_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_2_active"><span>Active</span></label>
+      </div>
+    </div>
+
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_3_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_3_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_3_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_3_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_3_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_3_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_3_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_3_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_3_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_3_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_3_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_3_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_3_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_3_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_3_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_3_active"><span>Active</span></label>
+      </div>
+    </div>
+
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_4_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_4_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_4_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_4_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_4_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_4_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_4_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_4_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_4_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_4_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_4_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_4_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_4_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_4_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_4_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_4_active"><span>Active</span></label>
+      </div>
+    </div>
+
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_5_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_5_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_5_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_5_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_5_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_5_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_5_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_5_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_5_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_5_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_5_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_5_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_5_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_5_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_5_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_5_active"><span>Active</span></label>
+      </div>
+    </div>
+
+    <div class="relationship-card">
+      <div class="relationship-topline">
+        <label class="relationship-line-field relationship-name-field"><span>Name</span><input type="text" name="attr_relationship_6_name"></label>
+        <label class="relationship-line-field relationship-played-field"><span>Played by</span><input type="text" name="attr_relationship_6_played_by"></label>
+      </div>
+      <label class="relationship-description"><span>Description</span><textarea name="attr_relationship_6_description"></textarea></label>
+      
+    <div class="relationship-connection field">
+      <span class="field-title">Connection</span>
+      <div class="connection-track" role="radiogroup" aria-label="Connection">
+        
+          <label class="connection-step connection-step-zero">
+            <span class="connection-number">0</span>
+            <input type="radio" name="attr_relationship_6_connection" value="0" aria-label="Connection 0" checked>
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">1</span>
+            <input type="radio" name="attr_relationship_6_connection" value="1" aria-label="Connection 1">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">2</span>
+            <input type="radio" name="attr_relationship_6_connection" value="2" aria-label="Connection 2">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">3</span>
+            <input type="radio" name="attr_relationship_6_connection" value="3" aria-label="Connection 3">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">4</span>
+            <input type="radio" name="attr_relationship_6_connection" value="4" aria-label="Connection 4">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">5</span>
+            <input type="radio" name="attr_relationship_6_connection" value="5" aria-label="Connection 5">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">6</span>
+            <input type="radio" name="attr_relationship_6_connection" value="6" aria-label="Connection 6">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">7</span>
+            <input type="radio" name="attr_relationship_6_connection" value="7" aria-label="Connection 7">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step">
+            <span class="connection-number">8</span>
+            <input type="radio" name="attr_relationship_6_connection" value="8" aria-label="Connection 8">
+            <span class="connection-dot"></span>
+          </label>
+        
+          <label class="connection-step connection-step-max">
+            <span class="connection-number">9</span>
+            <input type="radio" name="attr_relationship_6_connection" value="9" aria-label="Connection 9">
+            <span class="connection-dot"></span>
+          </label>
+      </div>
+    </div>
+      <div class="relationship-flags">
+        <input type="hidden" name="attr_relationship_6_networked" value="0">
+        <span class="checkline">Networked</span>
+      </div>
+      <div class="relationship-bonus-row">
+        <label class="relationship-bonus"><span>Connection Bonus</span><textarea name="attr_relationship_6_bonus"></textarea></label>
+        <label class="relationship-active"><input type="checkbox" name="attr_relationship_6_active"><span>Active</span></label>
+      </div>
+    </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="tab-panel benefits-panel">
+    <div class="tab-paper">
+    <div class="sheet-section benefits-section">
+      
+    <div class="benefits-header">
+      <h2>Requisitions<br> &amp; Work/Life Benefits</h2>
+      <div class="benefits-competency-summary arc-picker arc-competency">
+        <span class="arc-mark"><span>C</span></span>
+        <div class="arc-fields">
+          <span class="arc-name">Competency</span>
+          <div class="arc-writein">
+            <span class="benefits-competency-name" name="attr_competency_name_display"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="benefits-grid">
+        
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_1_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_1_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_1_effect"></textarea></label>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_2_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_2_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_2_effect"></textarea></label>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_3_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_3_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_3_effect"></textarea></label>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_4_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_4_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_4_effect"></textarea></label>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_5_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_5_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_5_effect"></textarea></label>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-topline">
+        <label class="benefit-line-field benefit-name-field"><span>Name</span><input type="text" name="attr_benefit_6_name"></label>
+        <label class="benefit-line-field benefit-code-field"><span>Page/PD Code</span><input type="text" name="attr_benefit_6_code"></label>
+      </div>
+      <label class="benefit-effect"><span>Effect</span><textarea name="attr_benefit_6_effect"></textarea></label>
+    </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="tab-panel balance-panel">
+    <div class="tab-paper">
+    <h2 class="balance-page-title">Work/Life Balance</h2>
+    <div class="balance-header">
+      <div class="balance-warning">
+        <span class="balance-icon balance-icon-warning" aria-hidden="true"></span>
+        <strong>Each time you mark a box, you must strike one out from the end of the other tracks.</strong>
+        <span>Mark 1 box per available time after each Mission, then visit the Paywalled Documents matching any code you mark.</span>
+      </div>
+      <div class="balance-counter balance-counter-mvp">
+        <span class="balance-icon balance-icon-mvp material-symbols-outlined" aria-hidden="true" title="google material symbols: emoji_events">emoji_events</span>
+        <span class="balance-counter-text"><strong>MVP</strong><small>Times Received</small></span>
+        <input type="text" name="attr_mvp_times" inputmode="numeric" pattern="[0-9]*" aria-label="MVP Times Received">
+        <span class="balance-counter-note">Awarded to the player who earns the most Commendations.</span>
+      </div>
+      <div class="balance-counter balance-counter-probation">
+        <span class="balance-icon balance-icon-probation material-symbols-outlined" aria-hidden="true" title="google material symbols: lock">lock</span>
+        <span class="balance-counter-text"><strong>Probation</strong><small>Times Received</small></span>
+        <input type="text" name="attr_probation_times" inputmode="numeric" pattern="[0-9]*" aria-label="Probation Times Received">
+        <span class="balance-counter-note">Awarded to the player who earns the most Demerits.</span>
+      </div>
+    </div>
+    <div class="card red balance-track-card"><h2>Competency</h2>
+    <div class="travel-track">
+      <span class="track-start track-start-triangle" aria-hidden="true"></span>
+      <div class="track-row track-row-top">
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_1">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_2">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_3">
+      <span>A3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_4">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_5">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_6">
+      <span>D4</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_7">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_8">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_9">
+      <span>G3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_10">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_11">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_12">
+      <span>J3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_13">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_14">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_15">
+      <span>N3</span>
+    </label></div>
+      <span class="track-turn" aria-hidden="true"></span>
+      <span class="track-start track-start-dot" aria-hidden="true"></span>
+      <div class="track-row track-row-bottom">
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_30">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_29">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_28">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_27">
+      <span>Y2</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_26">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_25">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_24">
+      <span>W8</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_23">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_22">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_21">
+      <span>T3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_20">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_19">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_18">
+      <span>Q3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_17">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_competency_track_16">
+      <span></span>
+    </label></div>
+    </div>
+      <div class="balance-help balance-help-competency">
+        <div class="balance-help-block">Each time you mark a box in your Competency track, increase your Maximum Quality Assurances by 1 in any Quality, up to a maximum of 9. Then, gain 3 Commendations.</div>
+        <div class="balance-help-block">When you receive Mission MVP, mark 1 box in your Competency track without striking one out from the other tracks.</div>
+      </div></div>
+    <div class="card gold balance-track-card"><h2>Reality</h2>
+    <div class="travel-track">
+      <span class="track-start track-start-triangle" aria-hidden="true"></span>
+      <div class="track-row track-row-top">
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_1">
+      <span>C4</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_2">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_3">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_4">
+      <span>L11</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_5">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_6">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_7">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_8">
+      <span>E2</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_9">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_10">
+      <span>O4</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_11">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_12">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_13">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_14">
+      <span>T6</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_15">
+      <span></span>
+    </label></div>
+      <span class="track-turn" aria-hidden="true"></span>
+      <span class="track-start track-start-dot" aria-hidden="true"></span>
+      <div class="track-row track-row-bottom">
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_30">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_29">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_28">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_27">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_26">
+      <span>E3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_25">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_24">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_23">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_22">
+      <span>H5</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_21">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_20">
+      <span>X3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_19">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_18">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_17">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_reality_track_16">
+      <span>V2</span>
+    </label></div>
+    </div>
+      <div class="balance-help balance-help-reality">
+        <div class="balance-help-block">Each time you mark a box in your Reality track, increase your Connection with any Relationship by 1, then repeat for each Networked Relationship.</div>
+        <div class="balance-help-block">When you receive neither Mission MVP nor Probation, you may increase your Connection with any Relationship by 1.</div>
+      </div></div>
+    <div class="card blue balance-track-card"><h2 class="anomaly-track-title"><span class="warped-text"><span class="warp-letter warp-letter-1" style="transform:rotate(-7deg) translateY(1px)">A</span><span class="warp-letter warp-letter-2" style="transform:rotate(4deg) translateY(-1px)">n</span><span class="warp-letter warp-letter-3" style="transform:rotate(-3deg) translateY(1px)">o</span><span class="warp-letter warp-letter-4" style="transform:rotate(5deg) translateY(-2px)">m</span><span class="warp-letter warp-letter-5" style="transform:rotate(-5deg) translateY(1px)">a</span><span class="warp-letter warp-letter-6" style="transform:rotate(3deg) translateY(-1px)">l</span><span class="warp-letter warp-letter-7" style="transform:rotate(-2deg) translateY(1px)">y</span></span></h2>
+    <div class="travel-track">
+      <span class="track-start track-start-triangle" aria-hidden="true"></span>
+      <div class="track-row track-row-top">
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_1">
+      <span>H4</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_2">
+      <span>H3</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_3">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_4">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_5">
+      <span>U2</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_6">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_7">
+      <span>X2</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_8">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_9">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_10">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_11">
+      <span>N1</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_12">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_13">
+      <span>Q2</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_14">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_15">
+      <span></span>
+    </label></div>
+      <span class="track-turn" aria-hidden="true"></span>
+      <span class="track-start track-start-dot" aria-hidden="true"></span>
+      <div class="track-row track-row-bottom">
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_30">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_29">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_28">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_27">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_26">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_25">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_24">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_23">
+      <span>A7</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_22">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_21">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_20">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_19">
+      <span>G8</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_18">
+      <span></span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_17">
+      <span>L10</span>
+    </label>
+
+    <label class="track-box">
+      <input type="checkbox" name="attr_anomaly_track_16">
+      <span></span>
+    </label></div>
+    </div>
+    <div class="balance-help balance-help-anomaly">
+      <div class="balance-help-block">
+        <p>Each time you mark a box in your Anomaly track, pick one:</p>
+        <p class="balance-help-choice"><strong>Practice:</strong> Mark Practiced on any Anomaly Ability.</p>
+        <p class="balance-help-choice"><strong>Be Known:</strong> Erase Practiced from an Anomaly ability and ask your team that ability's question. Mark the track of the answer that gets the most votes, then receive any unlocked Abilities.</p>
+        <p><strong>(I can teach you what all this means if you spend 1 time to go to H4!)</strong></p>
+      </div>
+      <div class="balance-help-block">When you receive Probation, mark 1 box in your Anomaly track without striking one out from the other tracks.</div>
+    </div></div>
+    </div>
+  </div>
+
+  <div class="tab-panel intake-panel">
+    <div class="tab-paper">
+    <div class="intake-layout">
+      <div class="intake-form">
+        <h2>Welcome, Agent</h2>
+        <p class="intake-intro">Please answer the following questions as truthfully as possible so the <span>Agency</span> and your coworkers can learn more about you.</p>
+        <div class="intake-questions">
+          
+    <label class="intake-question intake-question-lines-3">
+      <span class="intake-question-header"><span class="intake-number">1</span><span class="intake-prompt">How did you come in contact with your Anomaly?</span></span>
+      <textarea name="attr_intake_anomaly_contact" rows="3"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-3">
+      <span class="intake-question-header"><span class="intake-number">2</span><span class="intake-prompt">How did the Agency find you?</span></span>
+      <textarea name="attr_intake_agency_found" rows="3"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-3">
+      <span class="intake-question-header"><span class="intake-number">3</span><span class="intake-prompt">Do your powers have a unique visual manifestation?</span></span>
+      <textarea name="attr_intake_visual_manifestation" rows="3"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-1">
+      <span class="intake-question-header"><span class="intake-number">4</span><span class="intake-prompt">How do you take your coffee?</span></span>
+      <textarea name="attr_intake_coffee" rows="1"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-2">
+      <span class="intake-question-header"><span class="intake-number">5</span><span class="intake-prompt">Please describe your prior work experience.</span></span>
+      <textarea name="attr_prior_work_experience" rows="2"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-2">
+      <span class="intake-question-header"><span class="intake-number">6</span><span class="intake-prompt">What is your level of familiarity with Adobe, Excel, and Google Suite?</span></span>
+      <textarea name="attr_software_familiarity" rows="2"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-2">
+      <span class="intake-question-header"><span class="intake-number">7</span><span class="intake-prompt">What do you bring to the table in a collaborative work environment?</span></span>
+      <textarea name="attr_collaborative_work" rows="2"></textarea>
+    </label>
+          
+    <label class="intake-question intake-question-lines-2">
+      <span class="intake-question-header"><span class="intake-notes-icon material-symbols-outlined" aria-hidden="true" title="google material symbols: edit_note">edit_note</span><span class="intake-prompt">Additional Notes</span></span>
+      <textarea name="attr_additional_notes" rows="2"></textarea>
+    </label>
+        </div>
+      </div>
+      <div class="intake-side">
+        <div class="character-badge" aria-label="Character badge">
+          <span class="badge-slot" aria-hidden="true"></span>
+          <span class="badge-bars" aria-hidden="true"></span>
+          <div class="character-image-block" aria-label="Character image">
+            <img name="attr_character_avatar" alt="">
+          </div>
+          <div class="badge-footer">
+            <label class="badge-line badge-name-line"><span>Name</span><input type="text" name="attr_character_name"></label>
+            <div class="badge-bottom-row">
+              <label class="badge-line badge-pronouns-line"><span>Pronouns</span><input type="text" name="attr_pronouns"></label>
+              <span class="badge-logo" aria-hidden="true">TRIANGLE<br>AGENCY</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="personnel-details">
+          <div class="personnel-card">
+            
+    <label class="field">
+      <span>Emergency Contact</span>
+      <input type="text" name="attr_emergency_contact" >
+    </label>
+            
+    <label class="field">
+      <span>Relationship</span>
+      <input type="text" name="attr_emergency_relationship" >
+    </label>
+          </div>
+          <div class="personnel-card personnel-salary-card">
+            
+    <label class="field">
+      <span>Annual Salary</span>
+      <input type="text" name="attr_annual_salary" >
+    </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="tab-panel post-mission-panel">
+    <div class="tab-paper">
+    <div class="sheet-section post-mission-section">
+      <h2>Post-Mission Report</h2>
+      <div class="post-mission-layout">
+        <div class="post-mission-copy">
+          <p>Close out the current mission after MVP, Probation, and Work/Life Balance updates are recorded.</p>
+          <p>End Mission clears only current-mission counters: Commendations, Demerits, and Additional Burnout.</p>
+        </div>
+        <button type="action" name="act_end_mission" class="end-mission-button">End Mission</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<rolltemplate class="sheet-rolltemplate-taability">
+  <div class="sheet-template-container" style="background:#fffdf9;border:2px solid #355ba2;color:#2b1b49;font-family:Arial, Helvetica, sans-serif;">
+    <div class="sheet-template-header" style="background:#355ba2;color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:14px;font-weight:900;padding:6px 8px;text-transform:uppercase;">{{name}}</div>
+    <div class="sheet-template-row" style="border-bottom:1px solid #ded8e6;padding:5px 8px;"><span>Quality</span><strong style="float:right;">{{quality}}</strong></div>
+    <div class="sheet-template-dice" style="padding:8px;text-align:center;white-space:nowrap;">
+      
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_1 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_1 1}}
+      {{#rollTotal() computed::die_1 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_1 2}}
+      {{#rollTotal() computed::die_1 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_1 3}}
+      {{#rollTotal() computed::die_1 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_1 4}}
+      {{#rollTotal() computed::die_1_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_1_burned 1}}
+    </span>
+
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_2 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_2 1}}
+      {{#rollTotal() computed::die_2 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_2 2}}
+      {{#rollTotal() computed::die_2 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_2 3}}
+      {{#rollTotal() computed::die_2 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_2 4}}
+      {{#rollTotal() computed::die_2_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_2_burned 1}}
+    </span>
+
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_3 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_3 1}}
+      {{#rollTotal() computed::die_3 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_3 2}}
+      {{#rollTotal() computed::die_3 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_3 3}}
+      {{#rollTotal() computed::die_3 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_3 4}}
+      {{#rollTotal() computed::die_3_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_3_burned 1}}
+    </span>
+
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_4 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_4 1}}
+      {{#rollTotal() computed::die_4 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_4 2}}
+      {{#rollTotal() computed::die_4 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_4 3}}
+      {{#rollTotal() computed::die_4 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_4 4}}
+      {{#rollTotal() computed::die_4_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_4_burned 1}}
+    </span>
+
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_5 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_5 1}}
+      {{#rollTotal() computed::die_5 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_5 2}}
+      {{#rollTotal() computed::die_5 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_5 3}}
+      {{#rollTotal() computed::die_5 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_5 4}}
+      {{#rollTotal() computed::die_5_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_5_burned 1}}
+    </span>
+
+    <span class="sheet-roll-die-slot" style="display:inline-block;height:27px;position:relative;width:31px;margin-right:5px;">
+      {{#rollTotal() computed::die_6 1}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">1</span></span>{{/rollTotal() computed::die_6 1}}
+      {{#rollTotal() computed::die_6 2}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">2</span></span>{{/rollTotal() computed::die_6 2}}
+      {{#rollTotal() computed::die_6 3}}<span class="sheet-roll-die sheet-roll-die-three" style="display:inline-block;height:27px;position:relative;width:31px;color:#fff;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #cf2034;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#fff;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">3</span></span>{{/rollTotal() computed::die_6 3}}
+      {{#rollTotal() computed::die_6 4}}<span class="sheet-roll-die sheet-roll-die-outline" style="display:inline-block;height:27px;position:relative;width:31px;color:#355ba2;"><span style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:27px solid #355ba2;"></span><span style="display:block;position:absolute;left:3px;top:4px;width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-bottom:21px solid #fffdf9;"></span><span style="display:block;position:absolute;left:0;top:10px;width:31px;color:#355ba2;font:900 14px/.9 Arial, Helvetica, sans-serif;text-align:center;">4</span></span>{{/rollTotal() computed::die_6 4}}
+      {{#rollTotal() computed::die_6_burned 1}}<span class="sheet-roll-die-burned" style="color:#fff;font:900 30px/.75 Arial, Helvetica, sans-serif;height:27px;left:0;position:absolute;text-align:center;text-shadow:-1px -1px 0 #355ba2,1px -1px 0 #355ba2,-1px 1px 0 #355ba2,1px 1px 0 #355ba2;top:3px;width:31px;z-index:5;">X</span>{{/rollTotal() computed::die_6_burned 1}}
+    </span>
+    </div>
+    {{#rollTotal() computed::success_flag 1}}<div class="sheet-template-result sheet-success" style="padding:8px;text-align:center;"><span class="sheet-success-triangle" style="display:inline-block;height:36px;position:relative;width:42px;"><span class="sheet-success-shape" style="display:block;position:absolute;left:0;top:0;width:0;height:0;border-left:21px solid transparent;border-right:21px solid transparent;border-bottom:36px solid #355ba2;"></span></span><span class="sheet-success-label" style="color:#355ba2;display:block;font:900 13px/1 Arial, Helvetica, sans-serif;margin-top:4px;text-align:center;">SUCCESS</span></div>{{/rollTotal() computed::success_flag 1}}
+    {{#rollTotal() computed::success_flag 0}}<div class="sheet-template-result sheet-failure" style="padding:8px;text-align:center;"><span class="sheet-failure-octagon" style="color:#fff;display:inline-block;font:900 18px/18px Arial, Helvetica, sans-serif;height:34px;text-align:center;width:34px;"><span style="display:block;height:0;margin:0 auto;width:18px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #cf2034;"></span><span style="background:#cf2034;display:block;height:18px;line-height:18px;text-align:center;width:34px;">X</span><span style="display:block;height:0;margin:0 auto;width:18px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #cf2034;"></span></span><span class="sheet-failure-label" style="color:#cf2034;display:block;font:900 13px/1 Arial, Helvetica, sans-serif;margin-top:4px;text-align:center;">FAILURE</span></div>{{/rollTotal() computed::success_flag 0}}
+    {{#rollTotal() natural_threes 3}}<div class="sheet-template-result sheet-triscendence" style="background:#f8efd7;color:#d89200;font-family:Arial, Helvetica, sans-serif;font-size:16px;font-weight:900;padding:8px;text-align:center;"><span class="sheet-triscendence-word">Triscendence</span></div>{{/rollTotal() natural_threes 3}}
+  </div>
+</rolltemplate>
+
+<script type="text/worker">
+const TA_ANOMALIES = [{"id":"whisper","label":"Whisper","tagline":"It's for you.","description":"Beautiful sentiments turned sour in the telling. Casual conversations escalated to great fights. Final goodbyes drowned out by noise. Whisper Anomalies edit their own story as it\u2019s told. Whispers are masters of the moment when sound becomes information. They\u2019re careless and manipulative; no need forcaution when they can always get a do-over, no fear of getting caught when their actions seem so subtle. Could a single conversation really become a year of misery? Could one missed word create a decade of despair? When a Whisper is around, absolutely. At the Agency , Whisper Resonants make great leaders. They know just what to say, and they always get that \u201cyes!\u201d When managing Whispers we recommend you communicate criticisms, requests, and improvement plans through an intermediary without a mind, such as AgencyOS. At meetings, it\u2019s best to assume their ideas are the ideas of the entire group.","abilities":[{"name":"Say Again?","question":"Q: When someone interrupts me, I give them... A: The benefit of the doubt. A: A piece of my mind.","questionCodes":["T2","P4"],"questionDetails":{"note":"","prompt":"When someone interrupts me, I give them...","answers":[{"text":"The benefit of the doubt.","code":"T2"},{"text":"A piece of my mind.","code":"P4"}]},"description":"You may respond to a spoken sentence with the phrase \u201cSay again?\u201d and then you may tell the group what the target says instead of what they said initially. Roll Presence . On a success, the target believes that the new sentence is what they meant. On six or more 3 s, you may speak for the target at any time in the next hour. On a failure, the target is unaffected, and for the next 3 hours you can only speak using the words in the sentence you intended for them.","quality":"Presence","setup":"You may respond to a spoken sentence with the phrase \u201cSay again?\u201d and then you may tell the group what the target says instead of what they said initially. Roll Presence .","outcomes":[{"type":"success","label":"On a success,","text":"the target believes that the new sentence is what they meant."},{"type":"triscendence","label":"On six or more 3s,","text":"you may speak for the target at any time in the next hour."},{"type":"failure","label":"On a failure,","text":"the target is unaffected, and for the next 3 hours you can only speak using the words in the sentence you intended for them."}]},{"name":"Tip of the Tongue","question":"Q: When I need to fit in somewhere, I... A: Jump in and act like I belong. A: Gradually infiltrate after a long period of careful reconnaissance.","questionCodes":["A11","B9"],"questionDetails":{"note":"","prompt":"When I need to fit in somewhere, I...","answers":[{"text":"Jump in and act like I belong.","code":"A11"},{"text":"Gradually infiltrate after a long period of careful reconnaissance.","code":"B9"}]},"description":"Open your mind to the thoughts of someone nearby. Let their words reach your voice and roll Empathy . On a success, you say what the target wishes they were saying right now. On every third 3 , you may ask a question about something currently relevant to the target and receive an answer from the GM. The question and answer must be spoken out loud by your character On a failure, you admit something you don't want anyone to know.","quality":"Empathy","setup":"Open your mind to the thoughts of someone nearby. Let their words reach your voice and roll Empathy .","outcomes":[{"type":"success","label":"On a success,","text":"you say what the target wishes they were saying right now."},{"type":"triscendence","label":"On every third 3,","text":"you may ask a question about something currently relevant to the target and receive an answer from the GM. The question and answer must be spoken out loud by your character"},{"type":"failure","label":"On a failure,","text":"you admit something you don't want anyone to know."}]},{"name":"Silence","question":"Q: I go quiet... A: So others can speak. A: So my next words hit harder.","questionCodes":["S10","S8"],"questionDetails":{"note":"","prompt":"I go quiet...","answers":[{"text":"So others can speak.","code":"S10"},{"text":"So my next words hit harder.","code":"S8"}]},"description":"Open your mouth and emit a sound that adjusts frequency to cancel out the noises you make. Roll Subtlety . On a success, none of your actions make a sound until after you make another roll or close your mouth. For each additional 3 , you can silence the actions of one additional target until this effect ends. On a failure, your frequency becomes imbalanced and you greatly amplify all sounds you make for the next hour.","quality":"Subtlety","setup":"Open your mouth and emit a sound that adjusts frequency to cancel out the noises you make. Roll Subtlety .","outcomes":[{"type":"success","label":"On a success,","text":"none of your actions make a sound until after you make another roll or close your mouth."},{"type":"additional","label":"For each additional 3,","text":"you can silence the actions of one additional target until this effect ends."},{"type":"failure","label":"On a failure,","text":"your frequency becomes imbalanced and you greatly amplify all sounds you make for the next hour."}]}]},{"id":"timepiece","label":"Timepiece","tagline":"You're welcome for the wait.","description":"Neverending school days. Memories vivid and unforgettable. Death, moments after escape. Timepiece Anomalies set the world\u2019s schedule and don\u2019t bother with a calendar. The powers of a Timepiece invite a uniquely casual selfishness. The mundane world is shackled to time\u2019s passage, and so everyone bends to the Timepiece\u2019s will. While patience and thoughtfulness could make this an unparalleled force for good, these Anomalies more often grow bored and careless, protected as they are from the consequences of waste. Agents bonded with Timepiece Anomalies are highly prized for their ability to ensure every meeting has time for one more question and every pay period fits neatly within the budget. However, after recent reports uncovering widespread abuse, standard procedure when working with Timepieces is to obscure deadlines and demand work be completed prior to being requested.","abilities":[{"name":"We've Got Time.","question":"Q: I know... A: The deep magic. A: Kung-fu.","questionCodes":["W3","C10"],"questionDetails":{"note":"","prompt":"I know...","answers":[{"text":"The deep magic.","code":"W3"},{"text":"Kung-fu.","code":"C10"}]},"description":"When you or a target are in a hurry to complete a task (fix a car, escape a pursuer, etc.) check any clock and say the phrase \u201cWe\u2019ve got time.\u201d Roll Professionalism . On a success, you\u2019re right. If the task is focused on and approached genuinely, it will be completed before the impending deadline. For each additional 3 , you gain an additional minute of preparation before the deadline hits for other activities. On a failure, you are catastrophically, terribly wrong \u2014 and you don\u2019t know until it\u2019s too late. Your pursuer takes you by surprise, the deadline has already passed\u2026where did all the time go?","quality":"Professionalism","setup":"When you or a target are in a hurry to complete a task (fix a car, escape a pursuer, etc.) check any clock and say the phrase \u201cWe\u2019ve got time.\u201d Roll Professionalism .","outcomes":[{"type":"success","label":"On a success,","text":"you\u2019re right. If the task is focused on and approached genuinely, it will be completed before the impending deadline."},{"type":"additional","label":"For each additional 3,","text":"you gain an additional minute of preparation before the deadline hits for other activities."},{"type":"failure","label":"On a failure,","text":"you are catastrophically, terribly wrong \u2014 and you don\u2019t know until it\u2019s too late. Your pursuer takes you by surprise, the deadline has already passed\u2026where did all the time go?"}]},{"name":"Overclock","question":"Q: I'll sleep when... A: I'm tired. A: I'm dead.","questionCodes":["P13","O7"],"questionDetails":{"note":"","prompt":"I'll sleep when...","answers":[{"text":"I'm tired.","code":"P13"},{"text":"I'm dead.","code":"O7"}]},"description":"When you or an ally rolls for an Anomaly ability other than this one, after seeing the result, punch a clock and roll Initiative On a success, you send the target back in time to assist themselves, allowing them to use the same ability a second time with an identical number of 3s. This second use can affect new targets and does not generate Chaos or Triscendence effects. For each additional 3 , you add one 3 to the second use. This effect can make a roll exceed six 3 s. On a failure, the original roll becomes a failure, and then the ability fails a second time. The second failure repeats on the same target or moves to a new target, whichever is worse. Chaos is not generated by the copied failure.","quality":"Initiative","setup":"When you or an ally rolls for an Anomaly ability other than this one, after seeing the result, punch a clock and roll Initiative","outcomes":[{"type":"success","label":"On a success,","text":"you send the target back in time to assist themselves, allowing them to use the same ability a second time with an identical number of 3s. This second use can affect new targets and does not generate Chaos or Triscendence effects."},{"type":"additional","label":"For each additional 3,","text":"you add one 3 to the second use. This effect can make a roll exceed six 3 s."},{"type":"failure","label":"On a failure,","text":"the original roll becomes a failure, and then the ability fails a second time. The second failure repeats on the same target or moves to a new target, whichever is worse. Chaos is not generated by the copied failure."}]},{"name":"Remember When","question":"p\u003e Q: I'm more likely to ask... A: Where are they now? A: Where are they going?","questionCodes":["O6","F3"],"questionDetails":{"note":"p\u003e Q: I'm more likely to ask...","prompt":"","answers":[{"text":"Where are they now?","code":"O6"},{"text":"Where are they going?","code":"F3"}]},"description":"Make someone feel an overwhelming rush of nostalgia for the time they let slip away. Hum a tune and roll Empathy . On a success, all past events, even recent ones, feel wistfully far away. The target is desperate to talk about their past and easily led toward subjects you\u2019re interested in \u2014 even typically secret or classified ones. On every third 3 , you may request a particular memory or sequence be described in perfect detail\u2014the GM will paint the entire scene, and it will not suffer the natural decay of memory. This effect can reveal information behind even Anomalous memory blockages or wipes. On a failure, the target becomes lost in their memories. They are overcome with emotion, and are useless for gathering information. Returning to the present will take time and care. Their condition generates at least one Loose End.","quality":"Empathy","setup":"Make someone feel an overwhelming rush of nostalgia for the time they let slip away. Hum a tune and roll Empathy .","outcomes":[{"type":"success","label":"On a success,","text":"all past events, even recent ones, feel wistfully far away. The target is desperate to talk about their past and easily led toward subjects you\u2019re interested in \u2014 even typically secret or classified ones."},{"type":"triscendence","label":"On every third 3,","text":"you may request a particular memory or sequence be described in perfect detail\u2014the GM will paint the entire scene, and it will not suffer the natural decay of memory. This effect can reveal information behind even Anomalous memory blockages or wipes."},{"type":"failure","label":"On a failure,","text":"the target becomes lost in their memories. They are overcome with emotion, and are useless for gathering information. Returning to the present will take time and care. Their condition generates at least one Loose End."}]}]},{"id":"manifold","label":"Manifold","tagline":"Straight ahead. Can't miss it.","description":"Labyrinths with no solution. Road trips finished in a blink. Weightless sleepers, waking at their fall. Manifold Anomalies consider space a suggestion, and physics one of space\u2019s boring friends. Particular and controlling, Manifolds delight in connecting dots and making \u201cimprovements.\u201d They tangle roads into impenetrable knots, turn pleasant journeys to torture as they drag out forever, and crash planes from airspace they\u2019d prefer to keep clear. When worlds collide, it\u2019s often because these Anomalies decided they should. Agents with these abilities gain an aptitude for making deliveries and avoiding distractions. If you notice your commute lengthening or your stapler floating out of reach, however, immediately request a mediation session with any Manifold employees you may have upset.","abilities":[{"name":"I Know a Shortcut!","question":"Q: The world is... A: As I see it. A: As I make it.","questionCodes":["F9","S16"],"questionDetails":{"note":"","prompt":"The world is...","answers":[{"text":"As I see it.","code":"F9"},{"text":"As I make it.","code":"S16"}]},"description":"When you want to get somewhere in a hurry, say the phrase \u201cI know a shortcut!\u201d and then describe a short path to the discussed location. Roll Initiative . On a success, your directions are correct, no matter how impossible, for yourself. This shortcut disappears once it has been used. For each additional 3 , an additional person may use your shortcut before it disappears. On a failure, your shortcut leads somewhere very inconvenient instead of the desired location, and it is persistent and visible to everyone on both ends.","quality":"Initiative","setup":"When you want to get somewhere in a hurry, say the phrase \u201cI know a shortcut!\u201d and then describe a short path to the discussed location. Roll Initiative .","outcomes":[{"type":"success","label":"On a success,","text":"your directions are correct, no matter how impossible, for yourself. This shortcut disappears once it has been used."},{"type":"additional","label":"For each additional 3,","text":"an additional person may use your shortcut before it disappears."},{"type":"failure","label":"On a failure,","text":"your shortcut leads somewhere very inconvenient instead of the desired location, and it is persistent and visible to everyone on both ends."}]},{"name":"Just Keep Walking...","question":"Q: I spend time with people... A: I want to understand. A: Who are already like me.","questionCodes":["A5","M9"],"questionDetails":{"note":"","prompt":"I spend time with people...","answers":[{"text":"I want to understand.","code":"A5"},{"text":"Who are already like me.","code":"M9"}]},"description":"When you give someone directions, are fleeing from a pursuer, or know where someone is going, you may attempt to trap them in a maze or endless hallway. Tie a knot and roll Persistence On a success, you trap them in a complex, repeating path of your own design. They cannot exit until you make another roll. For each additional 3 , you may trap an additional target or make the maze last for additional rolls past the first. On a failure, you speed them immediately along to their destination\u2014they reach their target, or catch you, immediately.","quality":"Persistence","setup":"When you give someone directions, are fleeing from a pursuer, or know where someone is going, you may attempt to trap them in a maze or endless hallway. Tie a knot and roll Persistence","outcomes":[{"type":"success","label":"On a success,","text":"you trap them in a complex, repeating path of your own design. They cannot exit until you make another roll."},{"type":"additional","label":"For each additional 3,","text":"you may trap an additional target or make the maze last for additional rolls past the first."},{"type":"failure","label":"On a failure,","text":"you speed them immediately along to their destination\u2014they reach their target, or catch you, immediately."}]},{"name":"Gyre the Gimbal","question":"Q: When in crisis, I... A: Fly. A: Fight.","questionCodes":["P6","S18"],"questionDetails":{"note":"","prompt":"When in crisis, I...","answers":[{"text":"Fly.","code":"P6"},{"text":"Fight.","code":"S18"}]},"description":"Adjust your balance and roll Professionalism . On a success, you change the orientation of gravity up to 90 degrees in a direction of your choosing. If you\u2019re in a room, it affects only that room. If you\u2019re outside, it affects everything within about 30 meters. This effect lasts until you make another roll. For each additional 3 , chose one: The change doesn\u2019t affect a single target, such as yourself. The range is infinite for a single target. Gravity for a single target is rotated further than 90 degrees. On a failure, you become unmoored from gravity. For at least an hour your body acts as if it is in a zero gravity environment. Anyone who sees this will become a Loose End.","quality":"Professionalism","setup":"Adjust your balance and roll Professionalism .","outcomes":[{"type":"success","label":"On a success,","text":"you change the orientation of gravity up to 90 degrees in a direction of your choosing. If you\u2019re in a room, it affects only that room. If you\u2019re outside, it affects everything within about 30 meters. This effect lasts until you make another roll."},{"type":"additional","label":"For each additional 3,","text":"chose one: The change doesn\u2019t affect a single target, such as yourself. The range is infinite for a single target. Gravity for a single target is rotated further than 90 degrees."},{"type":"failure","label":"On a failure,","text":"you become unmoored from gravity. For at least an hour your body acts as if it is in a zero gravity environment. Anyone who sees this will become a Loose End."}]}]},{"id":"gun","label":"Gun","tagline":"It's a gun.","description":"A sentence ended. A life ended. A hope, grand and genuine, for something attainable and beautiful, ended. Gun Anomalies arrive to put a stop to things. Now. Cynical and proud, Gun Anomalies are a well documented scourge on the mundane world. Their influence spreads misery, fear, and grief across nearly every band of society. Their powers extend further than machinery, however: the slap of a curtain hitting the stage, the slam of a door, and the soft bidoop of a breakup text are all within their niche. They may seek hosts who truly need their power but always, soon, corrupt. In the hands of an Agent, the Gun creates punctuality, efficiency, and cleanliness. Following Agency protocol ensures there\u2019s no chance of abuse or overuse, and Gun Resonants are beloved in every department. It is highly recommended you ensure they are aware of. The Gun Your Anomaly is always present in physical form, but is useless to anyone else. Determine a shape for your Gun or choose one of the following forms: Violin Deck of Cards Sword Tube of Lipstick Yo-yo Remote Control","abilities":[{"name":"Eliminate","question":"Only you answer this question. Q: Will you remember them all? A: No. A: Yes.","questionCodes":["S6","T5"],"questionDetails":{"note":"Only you answer this question.","prompt":"Will you remember them all?","answers":[{"text":"No.","code":"S6"},{"text":"Yes.","code":"T5"}]},"description":"You can remove a mundane object or person from the equation permanently. Once, they existed. Now they do not. Aim your Gun and roll Dynamism . On a success, the target disappears without a trace. On six or more 3s, choose any number of targets you can see from where you\u2019re standing. They disappear without a trace. On a failure, the target is killed. An object is destroyed, a living creature dies. This fact is visible, obvious, and potentially horrifying.","quality":"Dynamism","setup":"You can remove a mundane object or person from the equation permanently. Once, they existed. Now they do not. Aim your Gun and roll Dynamism .","outcomes":[{"type":"success","label":"On a success,","text":"the target disappears without a trace."},{"type":"triscendence","label":"On six or more 3s,","text":"choose any number of targets you can see from where you\u2019re standing. They disappear without a trace."},{"type":"failure","label":"On a failure,","text":"the target is killed. An object is destroyed, a living creature dies. This fact is visible, obvious, and potentially horrifying."}]},{"name":"Quick Draw","question":"Q: I shoot... A: Carefully. A: Immediately.","questionCodes":["G4","A12"],"questionDetails":{"note":"","prompt":"I shoot...","answers":[{"text":"Carefully.","code":"G4"},{"text":"Immediately.","code":"A12"}]},"description":"When something tries to hurt you, fire your Gun and roll Initiative On a success, you shot first. The aggressor takes one Harm before their attack and they do not succeed at hurting you. For each additional 3 , you may choose an additional target to Harm or Eliminate a target you\u2019ve already Harmed with this ability. On a failure, you misfire. Something or someone important to you is damaged, and the original attack against you proceeds as planned.","quality":"Initiative","setup":"When something tries to hurt you, fire your Gun and roll Initiative","outcomes":[{"type":"success","label":"On a success,","text":"you shot first. The aggressor takes one Harm before their attack and they do not succeed at hurting you."},{"type":"additional","label":"For each additional 3,","text":"you may choose an additional target to Harm or Eliminate a target you\u2019ve already Harmed with this ability."},{"type":"failure","label":"On a failure,","text":"you misfire. Something or someone important to you is damaged, and the original attack against you proceeds as planned."}]},{"name":"Open Carry","question":"Q: Friends are... A: Everywhere, if you know how to look. A: Enemies I haven't made yet.","questionCodes":["D6","W11"],"questionDetails":{"note":"","prompt":"Friends are...","answers":[{"text":"Everywhere, if you know how to look.","code":"D6"},{"text":"Enemies I haven't made yet.","code":"W11"}]},"description":"The threat of your Gun is so great that even the mundane can sense it. Make your options clear and roll Presence . On a success, a target you are focusing on is intimidated enough to do what you want. However, the GM rolls chooses one consequence from the following. The target will: Remember your face Contact the authorities React with extreme fear Seek retribution For each additional 3 , you may either remove an option from the possible consequences or add an additional target. For example, six 3 s could mean no consequences and 2 targets, or 5 targets and all potential consequences. On a failure, the target is unafraid. They become immune to all effects of your Gun, and will likely retaliate in immediate and dangerous ways.","quality":"Presence","setup":"The threat of your Gun is so great that even the mundane can sense it. Make your options clear and roll Presence .","outcomes":[{"type":"success","label":"On a success,","text":"a target you are focusing on is intimidated enough to do what you want. However, the GM rolls chooses one consequence from the following. The target will: Remember your face Contact the authorities React with extreme fear Seek retribution"},{"type":"additional","label":"For each additional 3,","text":"you may either remove an option from the possible consequences or add an additional target. For example, six 3 s could mean no consequences and 2 targets, or 5 targets and all potential consequences."},{"type":"failure","label":"On a failure,","text":"the target is unafraid. They become immune to all effects of your Gun, and will likely retaliate in immediate and dangerous ways."}]}]},{"id":"growth","label":"Growth","tagline":"More is always better.","description":"Invulnerable heroes. Monsters galloping on a thousand arms. Burglars spotting their prize through walls, and in the dark. Growth mutates the flesh to change the future. Equally comfortable in human society and untamed nature, Growths hide in plain sight. They fit in alongside a sympathetic mole is given great size to protect its territory, or a CFO has a sudden boost of intuition, or a butterfly\u2019s wings are slightly larger. Soon earthquakes, earnings, and hurricanes are picking up and the Growth gains power in their wake. While Agents with these abilities may be appreciated at first glance for their physical prowess, their subtler side is not to be underestimated: they are the first to understand any team\u2019s greatest weaknesses. Even so, these employees should not be given leadership positions. They work best where there is opportunity for Growth.","abilities":[{"name":"I'll Cover You!","question":"Q: I protect people because... A: I want them to know who's tougher. A: They cannot protect themselves.","questionCodes":["F5","L6"],"questionDetails":{"note":"","prompt":"I protect people because...","answers":[{"text":"I want them to know who's tougher.","code":"F5"},{"text":"They cannot protect themselves.","code":"L6"}]},"description":"When a nearby target would be hurt by an external force, you may say \u201cI\u2019ll cover you!\u201d and extend your flesh to protect them. Roll Persistence . On a success, you grow rapidly around them and take the attack for them. Any hurt, Harm, or death is dealt to you instead of them. On every third 3 , you armor yourself in extra layers of protective flesh. This instance of Harm is reduced by one, and any extra is applied to future Harm. (Higher numbers will create an obvious change in your physical body until it\u2019s lost to absorb the harm.) On a failure, you and the target both take the original harm. Your body grows beyond your intent and remains overgrown in an obvious way until you have at least an hour to rest and recuperate.","quality":"Persistence","setup":"When a nearby target would be hurt by an external force, you may say \u201cI\u2019ll cover you!\u201d and extend your flesh to protect them. Roll Persistence .","outcomes":[{"type":"success","label":"On a success,","text":"you grow rapidly around them and take the attack for them. Any hurt, Harm, or death is dealt to you instead of them."},{"type":"triscendence","label":"On every third 3,","text":"you armor yourself in extra layers of protective flesh. This instance of Harm is reduced by one, and any extra is applied to future Harm. (Higher numbers will create an obvious change in your physical body until it\u2019s lost to absorb the harm.)"},{"type":"failure","label":"On a failure,","text":"you and the target both take the original harm. Your body grows beyond your intent and remains overgrown in an obvious way until you have at least an hour to rest and recuperate."}]},{"name":"Limbs","question":"Q: When I run into a wall, I... A: Eat the wall. A: Step over the wall.","questionCodes":["S13","G9"],"questionDetails":{"note":"","prompt":"When I run into a wall, I...","answers":[{"text":"Eat the wall.","code":"S13"},{"text":"Step over the wall.","code":"G9"}]},"description":"Expand your physical possibility with additional limbs similar to the ones you already possess. Roll Dynamism On a success, you gain reach and control far beyond typical combatants, For each additional 3 , choose one: Disarm a target. Engage one more target. Render an engaged target unconscious. Kill an unconscious target. On a failure, you become only limbs. All other features disappear and you become a conscious pile of whatever limbs you were hoping to create. You are extremely awkward and vulnerable to Harm for an hour.","quality":"Dynamism","setup":"Expand your physical possibility with additional limbs similar to the ones you already possess. Roll Dynamism","outcomes":[{"type":"success","label":"On a success,","text":"you gain reach and control far beyond typical combatants,"},{"type":"additional","label":"For each additional 3,","text":"choose one: Disarm a target. Engage one more target. Render an engaged target unconscious. Kill an unconscious target."},{"type":"failure","label":"On a failure,","text":"you become only limbs. All other features disappear and you become a conscious pile of whatever limbs you were hoping to create. You are extremely awkward and vulnerable to Harm for an hour."}]},{"name":"Eyes","question":"Q: Have you seen a Vision of the End? A: No. Also, I like plants! A: Yes.","questionCodes":["G6","R7"],"questionDetails":{"note":"","prompt":"Have you seen a Vision of the End?","answers":[{"text":"No. Also, I like plants!","code":"G6"},{"text":"Yes.","code":"R7"}]},"description":"Open a few more eyes. Roll Professionalism . On a success, ayou sprout new eyes on your body, with potent new abilities. Spend 3s on the following: types of vision, which lasts for one hour: 1: Heat, Night, or Telescopic 2: Fingerprint or X-Ray 3 : Reality (Cuts through illusions and obfuscations) 4 :Plant Sign Language, Anomaly Tracking 5: Weakness 6: Future Sight On a failure, you see A Vision of the End. You receive a piece of forbidden knowledge about the end of all things, too big for your mind to comprehend. You suffer from an additional Burnout on all rolls until the end of the mission.","quality":"Professionalism","setup":"Open a few more eyes. Roll Professionalism .","outcomes":[{"type":"success","label":"On a success,","text":"ayou sprout new eyes on your body, with potent new abilities."},{"type":"triscendence","label":"Spend 3s on the following:","text":"types of vision, which lasts for one hour: 1: Heat, Night, or Telescopic 2: Fingerprint or X-Ray 3 : Reality (Cuts through illusions and obfuscations) 4 :Plant Sign Language, Anomaly Tracking 5: Weakness 6: Future Sight"},{"type":"failure","label":"On a failure,","text":"you see A Vision of the End. You receive a piece of forbidden knowledge about the end of all things, too big for your mind to comprehend. You suffer from an additional Burnout on all rolls until the end of the mission."}]}]},{"id":"dream","label":"Dream","tagline":"Don't worry. It's not real.","description":"Monsters at the foot of the bed. Birth, life, and death in a single night. Your face in a movie never filmed. Dream Anomalies decide if you want to wake up, and then choose whether you do. Dreams dance on the edge of despair and delight, stoking their victims\u2019 subconscious turmoil to create the perfect dramatic performance. They can be found festering in unfinished manuscripts, coursing through the halls of museums, funneling attention into billboards, and making every small problem larger than life. Also, of course, in dreams. Bonding with a Dream Anomaly can make Agents very popular at work! A Dream Resonant knows when the team is held back by fear, lack of motivation, or the wrong office decor. Please note that Agents with Dream abilities are no longer permitted to participate in Agency book clubs without written agreement that they will not \u201cfix\u201d the book prior to the meeting.","abilities":[{"name":"Nightmare","question":"Q: I tend to imagine... A: The best case scenario. A: The worst possible outcome.","questionCodes":["D1","R13"],"questionDetails":{"note":"","prompt":"I tend to imagine...","answers":[{"text":"The best case scenario.","code":"D1"},{"text":"The worst possible outcome.","code":"R13"}]},"description":"Project yourself into something larger-than-life. Pick a mind and wrap its shadow around yourself. Roll Presence . On a success, you may adopt an illusory form and appear as that form to your target. The form can be terrifying, beautiful, or mundane \u2014 and they believe it\u2019s your true form. On every third 3 , you may ask the player controlling the target to tell you one of the following before you take this form: Their worst fear Their greatest goal Their most secret desire On a failure, your true identity is emblazoned onto their mind \u2014 by night they will dream about you, by day they will think about you. For today, though, maybe nothing will happen.","quality":"Presence","setup":"Project yourself into something larger-than-life. Pick a mind and wrap its shadow around yourself. Roll Presence .","outcomes":[{"type":"success","label":"On a success,","text":"you may adopt an illusory form and appear as that form to your target. The form can be terrifying, beautiful, or mundane \u2014 and they believe it\u2019s your true form."},{"type":"triscendence","label":"On every third 3,","text":"you may ask the player controlling the target to tell you one of the following before you take this form: Their worst fear Their greatest goal Their most secret desire"},{"type":"failure","label":"On a failure,","text":"your true identity is emblazoned onto their mind \u2014 by night they will dream about you, by day they will think about you. For today, though, maybe nothing will happen."}]},{"name":"Naptime","question":"Q: My favorite dreams... A: Recur. A: Are completely unexpected.","questionCodes":["D8","S1"],"questionDetails":{"note":"","prompt":"My favorite dreams...","answers":[{"text":"Recur.","code":"D8"},{"text":"Are completely unexpected.","code":"S1"}]},"description":"Blow a pinch of sand onto a target and roll Subtlety On a success, you send the target into a sudden sleep. They\u2019ll have pleasant dreams and think they nodded off on their own after they wake up in a few minutes. For each additional 3 , choose one: Add an additional target to this effect. The effect lasts an additional hour On a failure, another target, an ally or perhaps even yourself, falls asleep instead. The fickle sand swirls in obvious ways, and the original target sees what you\u2019ve done.","quality":"Subtlety","setup":"Blow a pinch of sand onto a target and roll Subtlety","outcomes":[{"type":"success","label":"On a success,","text":"you send the target into a sudden sleep. They\u2019ll have pleasant dreams and think they nodded off on their own after they wake up in a few minutes."},{"type":"additional","label":"For each additional 3,","text":"choose one: Add an additional target to this effect. The effect lasts an additional hour"},{"type":"failure","label":"On a failure,","text":"another target, an ally or perhaps even yourself, falls asleep instead. The fickle sand swirls in obvious ways, and the original target sees what you\u2019ve done."}]},{"name":"Site Visit","question":"Q: When I finish a story, I often wish I could... A: Spend more time with the characters. A: Share the lesson with someone who needs it.","questionCodes":["P8","M4"],"questionDetails":{"note":"","prompt":"When I finish a story, I often wish I could...","answers":[{"text":"Spend more time with the characters.","code":"P8"},{"text":"Share the lesson with someone who needs it.","code":"M4"}]},"description":"Imagination is real enough. Step into a painting, photograph, video, novel, or other piece of art and roll Attentiveness . On a success, a you and any nearby allies you choose enter the world depicted. While inside you may manipulate objects, converse with people, and see from perspectives not featured in the original frame. On every third 3 , choose one: You and your allies change appearances to fit in with the art. When you leave, this piece of art is returned to its original condition On a failure, you forget how to hide your tracks. Opportunistic characters from nearby art can follow you and enter Reality on their own.","quality":"Attentiveness","setup":"Imagination is real enough. Step into a painting, photograph, video, novel, or other piece of art and roll Attentiveness .","outcomes":[{"type":"success","label":"On a success,","text":"a you and any nearby allies you choose enter the world depicted. While inside you may manipulate objects, converse with people, and see from perspectives not featured in the original frame."},{"type":"triscendence","label":"On every third 3,","text":"choose one: You and your allies change appearances to fit in with the art. When you leave, this piece of art is returned to its original condition"},{"type":"failure","label":"On a failure,","text":"you forget how to hide your tracks. Opportunistic characters from nearby art can follow you and enter Reality on their own."}]}]},{"id":"drain","label":"Drain","tagline":"For me? You shouldn't have.","description":"Thirst that never quenches. Kind words that leave you empty. Interest. Drain Anomalies feed on desire, decay, and gradual loss. Like the scorpion on the frog, these Anomalies take because it\u2019s how they live. It\u2019s what they do. Drains thrive wherever expectation negotiates with reality: when money leaps from wallets, loyalty dwindles to disgust, or an audience cackles at pain, a Drain is there to collect their share. Drain-bonded Agents are adept at lifting team morale and filling in wherever they\u2019re needed, so long as they have someone to model their work after. Keep in mind that their powers can be hard to resist. Should you find yourself becoming less energetic or interesting while your Drain teammate receives escalating acclaim in your field, thank them for putting your skills to good use!","abilities":[{"name":"Would You Like Some More?","question":"Q: I can lead a horse to water... A: But who drinks water? A: But I'm drinking first.","questionCodes":["Y4","C1"],"questionDetails":{"note":"","prompt":"I can lead a horse to water...","answers":[{"text":"But who drinks water?","code":"Y4"},{"text":"But I'm drinking first.","code":"C1"}]},"description":"To you, desire is a bucket. Poke a hole in it by saying \u201cWould you like some more?\u201d and roll Empathy . On a success, the person you are speaking to becomes very interested in more of the last thing they enjoyed (attention, affection, ice cream, rest, etc.) as identified by you and the player of the character. This does not create an addiction or a compulsion, but makes that thing, if it\u2019s available, into leverage or distraction far beyond its worth. For each additional 3 , you may spread their desire to one other nearby target to similar effect. On a failure, the target develops a loathing for the last thing they enjoyed. Your suggestion of more is insulting to them, and even thinking about that thing is revolting to them from now on.","quality":"Empathy","setup":"To you, desire is a bucket. Poke a hole in it by saying \u201cWould you like some more?\u201d and roll Empathy .","outcomes":[{"type":"success","label":"On a success,","text":"the person you are speaking to becomes very interested in more of the last thing they enjoyed (attention, affection, ice cream, rest, etc.) as identified by you and the player of the character. This does not create an addiction or a compulsion, but makes that thing, if it\u2019s available, into leverage or distraction far beyond its worth."},{"type":"additional","label":"For each additional 3,","text":"you may spread their desire to one other nearby target to similar effect."},{"type":"failure","label":"On a failure,","text":"the target develops a loathing for the last thing they enjoyed. Your suggestion of more is insulting to them, and even thinking about that thing is revolting to them from now on."}]},{"name":"Borrow","question":"Q: People love me because... A: If they don't, I find new people. A: I make sure I'm flawless.","questionCodes":["R9","S15"],"questionDetails":{"note":"","prompt":"People love me because...","answers":[{"text":"If they don't, I find new people.","code":"R9"},{"text":"I make sure I'm flawless.","code":"S15"}]},"description":"You may choose a feature of a mundane target and take it for yourself. Their face, their voice, their love, their fingerprints\u2014now you have it, and they do not. Roll Duplicity . On a success, this effect last for up to one hour For each additional 3 , choose one: The target keeps a flawed version of what\u2019s borrowed. The effect lasts an additional hour. You may share what\u2019s borrowed with one other target. On a failure, the target loses what you\u2019ve taken permanently, and no one gets it. They remember what they have lost.","quality":"Duplicity","setup":"You may choose a feature of a mundane target and take it for yourself. Their face, their voice, their love, their fingerprints\u2014now you have it, and they do not. Roll Duplicity .","outcomes":[{"type":"success","label":"On a success,","text":"this effect last for up to one hour"},{"type":"additional","label":"For each additional 3,","text":"choose one: The target keeps a flawed version of what\u2019s borrowed. The effect lasts an additional hour. You may share what\u2019s borrowed with one other target."},{"type":"failure","label":"On a failure,","text":"the target loses what you\u2019ve taken permanently, and no one gets it. They remember what they have lost."}]},{"name":"Universal Recipient","question":"Q: When someone hurts me... A: It's a chance for a valuable lesson. A: They should not have done that. Why did they do that?","questionCodes":["S19","B11"],"questionDetails":{"note":"","prompt":"When someone hurts me...","answers":[{"text":"It's a chance for a valuable lesson.","code":"S19"},{"text":"They should not have done that. Why did they do that?","code":"B11"}]},"description":"When you receive Harm or are hurt in any way, you may roll Persistence . On a success, elect a nearby living person or Anomaly other than what hurt you. They are hurt instead, and you are unhurt. For each additional 3 , you may choose an additional target who receives that same hurt. On a failure, your pain cycles back on itself, and you are dealt that hurt triply. If there would be Harm remaining after your death, it finds additional nearby targets until it is all dealt.","quality":"Persistence","setup":"When you receive Harm or are hurt in any way, you may roll Persistence .","outcomes":[{"type":"success","label":"On a success,","text":"elect a nearby living person or Anomaly other than what hurt you. They are hurt instead, and you are unhurt."},{"type":"additional","label":"For each additional 3,","text":"you may choose an additional target who receives that same hurt."},{"type":"failure","label":"On a failure,","text":"your pain cycles back on itself, and you are dealt that hurt triply. If there would be Harm remaining after your death, it finds additional nearby targets until it is all dealt."}]}]},{"id":"catalogue","label":"Catalogue","tagline":"But wait, there's more!","description":"Two yolks in every egg. Extra socks in a load of laundry. The perfect doubles partner. Catalogue Anomalies create exactly what you need, exactly how you want it. Mischievous by nature, Catalogue Anomalies in the wild are responsible for many of history\u2019s most notorious moments of surprise. Icebergs suddenly too close to avoid, viruses mutating to thrive in new hosts, critical battle plans in enemy hands\u2026Catalogues will make anything if it has an impact on the world. Their power is limited only by creativity, so they cling to hosts ripe with imagination. Agents can put their approved abilities to productive use when supplies are running low or their department is understaffed. Be advised: if you notice a Catalogue bonded coworker grooming new facial hair or asking whether important historical events \u201cstill happened here,\u201d they have likely been replaced by a duplicate and must be turned in for reorientation.","abilities":[{"name":"What's That Over There?","question":"Q: My friends would never hurt me, because... A: They don't know how. A: I hired them.","questionCodes":["Y1","I5"],"questionDetails":{"note":"","prompt":"My friends would never hurt me, because...","answers":[{"text":"They don't know how.","code":"Y1"},{"text":"I hired them.","code":"I5"}]},"description":"Point somewhere nearby and say \u201cwhat\u2019s that over there?\u201d. Roll Attentiveness . On a success, you create an object where you're pointing. It can be any mundane thing you imagine that fits comfortably and harmlessly inside the space, but can only feature details or information you would know. For each additional 3 , you may add another object nearby. On a failure, the GM will describe a different object that is now there, and it is either obviously out of place or extremely inconvenient.","quality":"Attentiveness","setup":"Point somewhere nearby and say \u201cwhat\u2019s that over there?\u201d. Roll Attentiveness .","outcomes":[{"type":"success","label":"On a success,","text":"you create an object where you're pointing. It can be any mundane thing you imagine that fits comfortably and harmlessly inside the space, but can only feature details or information you would know."},{"type":"additional","label":"For each additional 3,","text":"you may add another object nearby."},{"type":"failure","label":"On a failure,","text":"the GM will describe a different object that is now there, and it is either obviously out of place or extremely inconvenient."}]},{"name":"You Might Also Like...","question":"Q: To me, the customer is always... A: Wrong. A: Right.","questionCodes":["L2","J1"],"questionDetails":{"note":"","prompt":"To me, the customer is always...","answers":[{"text":"Wrong.","code":"L2"},{"text":"Right.","code":"J1"}]},"description":"Hold any object small enough to carry and roll Dynamism . On a success, the object changes to a similar\u2013but different\u2013version of the object. (A green coat becomes a blue coat, a stuffed bear becomes a stuffed tiger, room key #20 3 becomes #204, etc.) On every third 3 , you may give the object an additional variant you can freely swap it between, such as giving a cane an alternate self as a sword. This effect is permanent but it can only swap when you are handling the object. On a failure, the object is replaced with something entirely different. It can no longer be changed by this ability.","quality":"Dynamism","setup":"Hold any object small enough to carry and roll Dynamism .","outcomes":[{"type":"success","label":"On a success,","text":"the object changes to a similar\u2013but different\u2013version of the object. (A green coat becomes a blue coat, a stuffed bear becomes a stuffed tiger, room key #20 3 becomes #204, etc.)"},{"type":"triscendence","label":"On every third 3,","text":"you may give the object an additional variant you can freely swap it between, such as giving a cane an alternate self as a sword. This effect is permanent but it can only swap when you are handling the object."},{"type":"failure","label":"On a failure,","text":"the object is replaced with something entirely different. It can no longer be changed by this ability."}]},{"name":"Your Best Self","question":"Q: The enemy of my enemy is... A: My friend. A: Me.","questionCodes":["Y5","P5"],"questionDetails":{"note":"","prompt":"The enemy of my enemy is...","answers":[{"text":"My friend.","code":"Y5"},{"text":"Me.","code":"P5"}]},"description":"Open a container large enough to fit you entirely inside. Roll Duplicity . On a success, an alternate version of you is inside. They have one particular skill that is useful to your current situation (whittling, whistling, whisking, etc). They disappear from your world within the hour. On six or more 3 s, you can create an additional alternate self. On a failure, the alternate version you reveal is evil from your perspective. They have goals and priorities opposite yours and are committed to getting in your way until dealt with. They leave your world voluntarily only when satisfied by the changes they made to it.","quality":"Duplicity","setup":"Open a container large enough to fit you entirely inside. Roll Duplicity .","outcomes":[{"type":"success","label":"On a success,","text":"an alternate version of you is inside. They have one particular skill that is useful to your current situation (whittling, whistling, whisking, etc). They disappear from your world within the hour."},{"type":"triscendence","label":"On six or more 3s,","text":"you can create an additional alternate self."},{"type":"failure","label":"On a failure,","text":"the alternate version you reveal is evil from your perspective. They have goals and priorities opposite yours and are committed to getting in your way until dealt with. They leave your world voluntarily only when satisfied by the changes they made to it."}]}]},{"id":"absence","label":"Absence","tagline":"And when they turn aroud...","description":"Swings swaying gently with no rider. Successful escapes from impenetrable prisons. Grief. Wherever there is something to the nothing, there is Absence. Difficult to see, difficult to understand, and difficult to capture, Absence Anomalies can often only be described by their outlines. Untouchable and lonely, their power is seen strongest in misplaced cargo, incomplete plans, and quiet despair. They are enemies of industry and productivity but also of themselves: they must always be lost, or they won\u2019t exist at all. Inbox Zero is easy for those with Absence abilities! Send the nastiest problems and most complicated hassles their way and watch them vanish into nothing. (Keep a copy of their to-do list).","abilities":[{"name":"Missed!","question":"Q: In an argument, i'll win by... A: Identifying gaps in logic. A: Never backing down.","questionCodes":["I2","M10"],"questionDetails":{"note":"","prompt":"In an argument, i'll win by...","answers":[{"text":"Identifying gaps in logic.","code":"I2"},{"text":"Never backing down.","code":"M10"}]},"description":"They never seem to know where you are. When something might touch or hurt you, you can say \u201cMissed!\u201d and roll Duplicity . On a success, , you were always somewhere else nearby\u2014perhaps behind or on top of whatever tried to touch you. For each additional 3 , another willing, nearby target may be moved with you to the new location. On a failure, the target moves instead \u2014 to hurt another, to an angle that deals additional Harm, or to a very inconvenient place.","quality":"Duplicity","setup":"They never seem to know where you are. When something might touch or hurt you, you can say \u201cMissed!\u201d and roll Duplicity .","outcomes":[{"type":"success","label":"On a success,","text":", you were always somewhere else nearby\u2014perhaps behind or on top of whatever tried to touch you."},{"type":"additional","label":"For each additional 3,","text":"another willing, nearby target may be moved with you to the new location."},{"type":"failure","label":"On a failure,","text":"the target moves instead \u2014 to hurt another, to an angle that deals additional Harm, or to a very inconvenient place."}]},{"name":"Negatives","question":"Q: To fill empty space, I tend to... A: Make conversation. A: Take up more of it.","questionCodes":["W5","C6"],"questionDetails":{"note":"","prompt":"To fill empty space, I tend to...","answers":[{"text":"Make conversation.","code":"W5"},{"text":"Take up more of it.","code":"C6"}]},"description":"Inspect the place where something once was. Roll Attentiveness On a success, you can see the lost history of the place you\u2019re inspecting. If a note was removed, you know what it read\u2014if an object was stolen, you know what it was and how it left. On every third 3 , you may say one sentence about what is lost, and that sentence is true. On a failure, there\u2019s too much loss. You become overwhelmed by the history of the location you\u2019re in, and receive one Harm \u2014 in addition to any Loose Ends caused by your visible, painful reaction.","quality":"Attentiveness","setup":"Inspect the place where something once was. Roll Attentiveness","outcomes":[{"type":"success","label":"On a success,","text":"you can see the lost history of the place you\u2019re inspecting. If a note was removed, you know what it read\u2014if an object was stolen, you know what it was and how it left."},{"type":"triscendence","label":"On every third 3,","text":"you may say one sentence about what is lost, and that sentence is true."},{"type":"failure","label":"On a failure,","text":"there\u2019s too much loss. You become overwhelmed by the history of the location you\u2019re in, and receive one Harm \u2014 in addition to any Loose Ends caused by your visible, painful reaction."}]},{"name":"Unbound","question":"Q: I'd rather be... A: The distraction. A: Undercover.","questionCodes":["U3","O3"],"questionDetails":{"note":"","prompt":"I'd rather be...","answers":[{"text":"The distraction.","code":"U3"},{"text":"Undercover.","code":"O3"}]},"description":"If something is in your way or holding you back, relax your body and roll Subtlety . On a success, you pass directly through it. You become intangible and can move easily through walls, chains, and other obstructions for one hour. On every third 3 , chose one: You become invisible You become inaudible You become unmemorable to one observer You bring one person with you any time you pass through an obstacle while using this ability. On a failure, you lose control of your physical form and become unstable. You are unable to feel, hold, or interact with physical objects, but can still be Harmed for the remainder of the mission or until you die, whichever comes first.","quality":"Subtlety","setup":"If something is in your way or holding you back, relax your body and roll Subtlety .","outcomes":[{"type":"success","label":"On a success,","text":"you pass directly through it. You become intangible and can move easily through walls, chains, and other obstructions for one hour."},{"type":"triscendence","label":"On every third 3,","text":"chose one: You become invisible You become inaudible You become unmemorable to one observer You bring one person with you any time you pass through an obstacle while using this ability."},{"type":"failure","label":"On a failure,","text":"you lose control of your physical form and become unstable. You are unable to feel, hold, or interact with physical objects, but can still be Harmed for the remainder of the mission or until you die, whichever comes first."}]}]}];
+const TA_REALITIES = [{"id":"caretaker","label":"Caretaker","realityTriggerTitle":"Needy","realityTriggerText":"Your Dependent needs attention. If you ignore them, the Relationship with the least camaraderie with your Dependent loses 1 Connection.","burnoutReleaseTitle":"It's Your Favorite!","burnoutReleaseText":"When you are doing something that will entertain your Dependent, ignore all Burnout."},{"id":"overbooked","label":"Overbooked","realityTriggerTitle":"Work Phone","realityTriggerText":"A Relationship calls about something important related to your Vocation. Address it, or the caller loses 1 Connection.","burnoutReleaseTitle":"Threading the Needle","burnoutReleaseText":"When you are doing something that counts as work or practice for your Vocation, ignore all Burnout."},{"id":"pursued","label":"Pursued","realityTriggerTitle":"On Your Trail","realityTriggerText":"Someone recognizes you and will report back to those looking for you. Put them off your scent, or the Relationship who knows the least about you loses 1 Connection.","burnoutReleaseTitle":"Wasn't Me","burnoutReleaseText":"When you're doing something that will cover your tracks, ignore all Burnout."},{"id":"star","label":"Star","realityTriggerTitle":"Your Biggest Fan","realityTriggerText":"Someone recognizes you and becomes desperate for your attention. If you ignore them, the Relationship with the most to lose from your fall loses 1 Connection.","burnoutReleaseTitle":"Eat It Up","burnoutReleaseText":"When you are doing something that will assert your superiority or prove your worth, ignore all Burnout."},{"id":"struggling","label":"Struggling","realityTriggerTitle":"Fly in Your Wallet","realityTriggerText":"Something you are obligated to pay costs more than you can afford. Escape payment, or borrow from a friend: one Relationship you choose loses 1 Connection.","burnoutReleaseTitle":"Not a Penny More","burnoutReleaseText":"When you are doing something that will get you a good deal, ignore all Burnout."},{"id":"newborn","label":"Newborn","realityTriggerTitle":"Still Learning","realityTriggerText":"You forget, or never knew, how to do a common everyday activity. Find assistance or another path, or the Relationship whose opinion you value most loses 1 Connection.","burnoutReleaseTitle":"Just Like Home","burnoutReleaseText":"When you are doing something that will make the world more like you, ignore all Burnout."},{"id":"romantic","label":"Romantic","realityTriggerTitle":"Oh No, They're Hot","realityTriggerText":"You notice a Vibe. If you do not shoot your shot, the Relationship you are closest to something real with loses 1 Connection.","burnoutReleaseTitle":"That's Right, I'm Hot","burnoutReleaseText":"Whenever you're doing something that will make you look more attractive or sympathetic, ignore all Burnout."},{"id":"backbone","label":"Backbone","realityTriggerTitle":"Endless Responsibility","realityTriggerText":"One of your Organization's members needs you. Ignore or avoid them, and a Relationship chosen by your successor's player loses 1 Connection.","burnoutReleaseTitle":"Here's My Card","burnoutReleaseText":"When you are doing something that will increase the influence of your Organization, ignore all Burnout."},{"id":"creature","label":"Creature","realityTriggerTitle":"Yes Right Now","realityTriggerText":"One of your true needs rises to the surface. If you ignore the urge, the Relationship who most believes your disguise loses 1 Connection.","burnoutReleaseTitle":"Crushing It","burnoutReleaseText":"When you are doing something that will make you seem less interesting, ignore all Burnout."}];
+const TA_COMPETENCIES = [{"id":"barista","label":"Barista","primeDirective":"Keep the mood fresh. Each time you say someone's name correctly, receive 1 Demerit.","sanctionedBehaviors":["Make someone feel welcome.","Show off your specialized knowledge.","Get some blood flowing."]},{"id":"ceo","label":"CEO","primeDirective":"Maintain the hierarchy. Each time you take an order, receive 1 Demerit.","sanctionedBehaviors":["Make someone do what you want.","Enjoy one of the finer things in life.","Make a necessary sacrifice."]},{"id":"clown","label":"Clown","primeDirective":"Keep them laughing. Each time you talk about feelings, receive 1 Demerit.","sanctionedBehaviors":["Put on a show.","Expose an embarrassing truth.","Demand a smile."]},{"id":"gravedigger","label":"Gravedigger","primeDirective":"Don't dirty innocent hands. Each time you touch something living, receive 1 Demerit.","sanctionedBehaviors":["Dig up some dirt.","Clean up a mess.","Bury a problem."]},{"id":"hotline","label":"Hotline","primeDirective":"Never say \"unfortunately.\" Each time you deliver bad news, receive 1 Demerit.","sanctionedBehaviors":["Help someone unburden themselves.","Take the blame for something you didn't do.","Connect someone to an unexpected fate."]},{"id":"intern","label":"Intern","primeDirective":"They wouldn't ask if it wasn't important. Each time you deny a request, receive 1 Demerit.","sanctionedBehaviors":["Confidently fail.","Embarrass yourself for others' benefit.","Bring something screeching to a halt."]},{"id":"pr","label":"PR","primeDirective":"Keep everything above board. Each time you lie, receive 1 Demerit.","sanctionedBehaviors":["Create a distraction.","Give a great excuse.","Ensure they will never speak of this again."]},{"id":"randd","label":"R\u0026D","primeDirective":"Out with the old. Each time you do the same thing twice, receive 1 Demerit.","sanctionedBehaviors":["Uncover what someone really wants.","Reinvent the wheel.","Change someone's life. Permanently."]},{"id":"reception","label":"Reception","primeDirective":"Remain ever vigilant. Choose one: Each time you sit down, receive 1 Demerit. Each time you leave a question unanswered, receive 1 Demerit.","sanctionedBehaviors":["Interrogate someone.","Commandeer belongings.","Close a door forever."]}];
+const TA_QUALITY_ATTRS = {"Attentiveness":"attentiveness","Duplicity":"duplicity","Dynamism":"dynamism","Empathy":"empathy","Initiative":"initiative","Persistence":"persistence","Presence":"presence","Professionalism":"professionalism","Subtlety":"subtlety"};
+
+function findById(items, id) {
+  return items.find(item => item.id === id) || null;
+}
+
+function intValue(value) {
+  const number = parseInt(value, 10);
+  return Number.isFinite(number) ? number : 0;
+}
+
+function getRollResult(results, name) {
+  return intValue(results && results.results && results.results[name] && results.results[name].result);
+}
+
+function rollTemplateText(value) {
+  return String(value || '').replace(/[{}]/g, '').trim();
+}
+
+const TA_MISSION_RESET_ATTRS = [
+  'commendations',
+  'demerits',
+  'additional_burnout',
+];
+
+function endMission() {
+  const resetAttrs = {};
+  TA_MISSION_RESET_ATTRS.forEach(function(attr) {
+    resetAttrs[attr] = '';
+  });
+  setAttrs(resetAttrs);
+}
+
+function updateAbilityBurnout(index) {
+  const qualityAttrName = 'ability_' + index + '_quality_attr';
+  getAttrs([qualityAttrName, 'additional_burnout'], function(values) {
+    const qualityAttr = values[qualityAttrName];
+    if (!qualityAttr) {
+      setAttrs({ ['ability_' + index + '_burnout']: 0 });
+      return;
+    }
+
+    getAttrs([qualityAttr + '_current'], function(qualityValues) {
+      const currentQa = intValue(qualityValues[qualityAttr + '_current']);
+      const baseBurnout = currentQa <= 0 ? 1 : 0;
+      const additionalBurnout = Math.max(0, intValue(values.additional_burnout));
+      setAttrs({ ['ability_' + index + '_burnout']: baseBurnout + additionalBurnout });
+    });
+  });
+}
+
+function updateAllAbilityBurnout() {
+  for (let i = 1; i <= 3; i += 1) {
+    updateAbilityBurnout(i);
+  }
+}
+
+function rollAbility(index) {
+  const attrNames = [
+    'character_name',
+    'ability_' + index + '_name',
+    'ability_' + index + '_quality',
+    'ability_' + index + '_quality_attr',
+    'ability_' + index + '_burnout',
+  ];
+
+  getAttrs(attrNames, function(values) {
+    const abilityName = values['ability_' + index + '_name'] || 'Ability ' + index;
+    const quality = values['ability_' + index + '_quality'] || 'Unspecified';
+    const burnout = Math.max(0, intValue(values['ability_' + index + '_burnout']));
+
+    const rollName = rollTemplateText((values.character_name ? values.character_name + ': ' : '') + abilityName);
+    const rollQuality = rollTemplateText(quality);
+    const command = '&{template:taability} ' +
+      '{{name=' + rollName + '}} ' +
+      '{{quality=' + rollQuality + '}} ' +
+      '{{natural_threes=[[6d4=3]]}} ' +
+      '{{burnout=[[0]]}} ' +
+      '{{applied_burnout=[[0]]}} ' +
+      '{{triscendence_flag=[[0]]}} ' +
+      '{{final_threes=[[0]]}} ' +
+      '{{success_flag=[[0]]}} ' +
+      '{{die_1=[[0]]}} {{die_2=[[0]]}} {{die_3=[[0]]}} {{die_4=[[0]]}} {{die_5=[[0]]}} {{die_6=[[0]]}} ' +
+      '{{die_1_burned=[[0]]}} {{die_2_burned=[[0]]}} {{die_3_burned=[[0]]}} {{die_4_burned=[[0]]}} {{die_5_burned=[[0]]}} {{die_6_burned=[[0]]}}';
+
+    startRoll(command, function(results) {
+      const naturalThrees = getRollResult(results, 'natural_threes');
+      const dice = results && results.results && results.results.natural_threes && results.results.natural_threes.dice || [];
+      const triscendence = naturalThrees === 3;
+      const appliedBurnout = triscendence ? 0 : burnout;
+      const finalThrees = triscendence ? naturalThrees : Math.max(0, naturalThrees - burnout);
+      let burnedRemaining = appliedBurnout;
+      const burnedDice = dice.map(function(value) {
+        if (value === 3 && burnedRemaining > 0) {
+          burnedRemaining -= 1;
+          return 1;
+        }
+        return 0;
+      });
+
+      finishRoll(results.rollId, {
+        burnout,
+        applied_burnout: appliedBurnout,
+        triscendence_flag: triscendence ? 1 : 0,
+        final_threes: finalThrees,
+        success_flag: finalThrees > 0 ? 1 : 0,
+        die_1: dice[0] || 0,
+        die_2: dice[1] || 0,
+        die_3: dice[2] || 0,
+        die_4: dice[3] || 0,
+        die_5: dice[4] || 0,
+        die_6: dice[5] || 0,
+        die_1_burned: burnedDice[0] || 0,
+        die_2_burned: burnedDice[1] || 0,
+        die_3_burned: burnedDice[2] || 0,
+        die_4_burned: burnedDice[3] || 0,
+        die_5_burned: burnedDice[4] || 0,
+        die_6_burned: burnedDice[5] || 0,
+      });
+    });
+  });
+}
+
+function setSelectedReality() {
+  getAttrs(['reality_id'], function(values) {
+    const reality = findById(TA_REALITIES, values.reality_id);
+    setAttrs({
+      reality_name_display: reality ? reality.label : '',
+      reality_trigger_display: reality ? reality.realityTriggerTitle + ': ' + reality.realityTriggerText : '',
+      burnout_release_display: reality ? reality.burnoutReleaseTitle + ': ' + reality.burnoutReleaseText : '',
+    });
+  });
+}
+
+function updateNetworkedRelationshipsCount() {
+  getAttrs([
+    'relationship_1_connection',
+    'relationship_2_connection',
+    'relationship_3_connection',
+    'relationship_4_connection',
+    'relationship_5_connection',
+    'relationship_6_connection',
+  ], function(values) {
+    const updates = {};
+    const count = [1, 2, 3, 4, 5, 6].reduce(function(total, index) {
+      const isNetworked = values['relationship_' + index + '_connection'] === '9';
+      updates['relationship_' + index + '_networked'] = isNetworked ? '1' : '0';
+      return total + (isNetworked ? 1 : 0);
+    }, 0);
+    updates.networked_relationships_count = count;
+    setAttrs(updates);
+  });
+}
+
+function setSelectedCompetency() {
+  getAttrs(['competency_id'], function(values) {
+    const competency = findById(TA_COMPETENCIES, values.competency_id);
+    const behaviors = competency ? competency.sanctionedBehaviors : [];
+    setAttrs({
+      competency_name_display: competency ? competency.label : '',
+      prime_directive_display: competency ? competency.primeDirective : '',
+      sanctioned_behavior_1_display: behaviors[0] || '',
+      sanctioned_behavior_2_display: behaviors[1] || '',
+      sanctioned_behavior_3_display: behaviors[2] || '',
+    });
+  });
+}
+
+function setSelectedAnomaly(eventInfo) {
+  getAttrs(['anomaly_id'], function(values) {
+    const anomaly = findById(TA_ANOMALIES, values.anomaly_id);
+    const anomalyChanged = eventInfo && eventInfo.sourceAttribute === 'anomaly_id';
+    const attrs = {
+      anomaly_name_display: anomaly ? anomaly.label : '',
+      anomaly_description_display: anomaly ? anomaly.description : '',
+    };
+
+    for (let i = 1; i <= 3; i += 1) {
+      const ability = anomaly && anomaly.abilities[i - 1];
+      const question = ability && ability.questionDetails || {};
+      attrs['ability_' + i + '_name'] = ability ? ability.name : '';
+      attrs['ability_' + i + '_question'] = ability ? ability.question : '';
+      attrs['ability_' + i + '_question_note'] = question.note || '';
+      attrs['ability_' + i + '_question_prompt'] = question.prompt || '';
+      attrs['ability_' + i + '_description'] = ability ? ability.description : '';
+      attrs['ability_' + i + '_setup'] = ability ? ability.setup || '' : '';
+      attrs['ability_' + i + '_quality'] = ability ? ability.quality : '';
+      attrs['ability_' + i + '_quality_display'] = ability ? ability.quality : '';
+      attrs['ability_' + i + '_quality_attr'] = ability && ability.quality ? TA_QUALITY_ATTRS[ability.quality] : '';
+
+      ['success', 'additional', 'triscendence', 'failure'].forEach(function(type) {
+        attrs['ability_' + i + '_' + type + '_label'] = '';
+        attrs['ability_' + i + '_' + type + '_text'] = '';
+      });
+
+      const outcomes = ability && ability.outcomes || [];
+      outcomes.forEach(function(outcome) {
+        const type = outcome && outcome.type || '';
+        if (['success', 'additional', 'triscendence', 'failure'].indexOf(type) === -1) return;
+
+        const labelName = 'ability_' + i + '_' + type + '_label';
+        const textName = 'ability_' + i + '_' + type + '_text';
+        attrs[labelName] = attrs[labelName] || outcome.label || '';
+        attrs[textName] = [attrs[textName], outcome.text].filter(Boolean).join('\n');
+      });
+
+      for (let answer = 1; answer <= 2; answer += 1) {
+        const answerData = question.answers && question.answers[answer - 1] || {};
+        attrs['ability_' + i + '_answer_' + answer] = answerData.text || '';
+        attrs['ability_' + i + '_answer_' + answer + '_code'] = answerData.code || '';
+
+        if (anomalyChanged) {
+          for (let mark = 1; mark <= 3; mark += 1) {
+            attrs['ability_' + i + '_answer_' + answer + '_mark_' + mark] = '0';
+          }
+        }
+      }
+    }
+
+    setAttrs(attrs, updateAllAbilityBurnout);
+  });
+}
+
+on('sheet:opened change:reality_id', setSelectedReality);
+on('sheet:opened change:competency_id', setSelectedCompetency);
+on('sheet:opened change:anomaly_id', setSelectedAnomaly);
+on('sheet:opened change:relationship_1_connection change:relationship_2_connection change:relationship_3_connection change:relationship_4_connection change:relationship_5_connection change:relationship_6_connection', updateNetworkedRelationshipsCount);
+on('sheet:opened change:additional_burnout change:attentiveness_current change:duplicity_current change:dynamism_current change:empathy_current change:initiative_current change:persistence_current change:presence_current change:professionalism_current change:subtlety_current', updateAllAbilityBurnout);
+on('clicked:ability_1_roll', function() { rollAbility(1); });
+on('clicked:ability_2_roll', function() { rollAbility(2); });
+on('clicked:ability_3_roll', function() { rollAbility(3); });
+on('clicked:end_mission', endMission);
+</script>

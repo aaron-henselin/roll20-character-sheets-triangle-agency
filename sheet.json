@@ -1,0 +1,9 @@
+{
+  "html": "triangle-agency.html",
+  "css": "triangle-agency.css",
+  "authors": "Triangle Agency sheet conversion",
+  "roll20userid": "",
+  "preview": "preview.png",
+  "instructions": "Functional Roll20 conversion of the Triangle Agency character sheet. Imagery is intentionally minimal in this first pass.",
+  "legacy": false
+}
