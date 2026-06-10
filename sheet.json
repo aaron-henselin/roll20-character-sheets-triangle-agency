@@ -1,9 +1,9 @@
 {
   "html": "triangle-agency.html",
   "css": "triangle-agency.css",
-  "authors": "Triangle Agency sheet conversion",
+  "authors": "Aaron Henselin",
   "roll20userid": "",
   "preview": "preview.png",
-  "instructions": "Functional Roll20 conversion of the Triangle Agency character sheet. Imagery is intentionally minimal in this first pass.",
+  "instructions": "Unofficial Roll20 character sheet for Triangle Agency. Triangle Agency is designed by Caleb Zane Huett and Sean Ireland and published by Haunted Table Games. This sheet is an unofficial fan/community conversion by Aaron Henselin and is not affiliated with, endorsed by, or sponsored by Haunted Table Games or the Triangle Agency creators.",
   "legacy": false
 }
