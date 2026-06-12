@@ -1890,6 +1890,27 @@ body.sheet-darkmode .charsheet .triangle-sheet .tab-label {
   min-width: 0;
 }
 
+.charsheet .ability-name-select {
+  appearance: auto;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  font: 900 12px/1.2 var(--writein-font);
+  height: 24px;
+  margin: 0;
+  max-width: 2000px;
+  min-height: 24px;
+  padding: 2px 6px;
+  text-transform: none;
+  width: 100% !important;
+}
+
+.charsheet .ability-name-select option {
+  color: var(--ink);
+  font: 13px Arial, Helvetica, sans-serif;
+}
+
 .charsheet .ability-quality-badge {
   align-items: center;
   background: #fff;
@@ -3248,6 +3269,32 @@ body.sheet-darkmode .charsheet .triangle-sheet .tab-label {
   display: flex;
   justify-content: space-between;
   padding: 5px 8px;
+}
+
+.sheet-rolltemplate-taability .sheet-chaos-row {
+  border-top: 1px solid #ded8e6;
+  color: #2b1b49;
+  font-family: "ITC Avant Garde Gothic LT Bold", "Avant Garde", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sheet-rolltemplate-taability .sheet-chaos-value {
+  align-items: center;
+  color: #355ba2;
+  display: inline-flex;
+  gap: 5px;
+}
+
+.sheet-rolltemplate-taability .sheet-chaos-mark {
+  display: inline-block;
+  font-family: "Pictos Custom";
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  width: 18px;
 }
 
 .sheet-rolltemplate-taability .sheet-template-dice {
