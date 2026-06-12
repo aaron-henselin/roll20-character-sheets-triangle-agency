@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward,edit_note,emoji_events,gavel,language,local_fire_department,lock,workspace_premium");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward,delete,edit_note,emoji_events,gavel,language,local_fire_department,lock,workspace_premium");
 
 :root {
   --ink: #2b1b49;
@@ -17,6 +17,13 @@
 .sheetform,
 .charsheet {
   background-color: transparent;
+}
+
+body.sheet-darkmode .sheetform,
+body.sheet-darkmode .charsheet,
+.sheet-darkmode .sheetform,
+.sheet-darkmode .charsheet {
+  background-color: transparent !important;
 }
 
 .charsheet .triangle-sheet {
@@ -1890,25 +1897,121 @@ body.sheet-darkmode .charsheet .triangle-sheet .tab-label {
   min-width: 0;
 }
 
-.charsheet .ability-name-select {
-  appearance: auto;
+.charsheet .additional-ability-card .ability-title {
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+}
+
+.charsheet .ability-remove-button {
+  align-items: center;
   background: transparent;
-  border: 0;
-  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, .75);
   color: #fff;
-  font: 900 12px/1.2 var(--writein-font);
+  cursor: pointer;
+  display: flex;
   height: 24px;
-  margin: 0;
-  max-width: 2000px;
+  justify-content: center;
   min-height: 24px;
-  padding: 2px 6px;
-  text-transform: none;
+  padding: 0;
+  width: 24px;
+}
+
+.charsheet .ability-remove-button .material-symbols-outlined {
+  display: block;
+  font-family: "Material Symbols Outlined";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.charsheet .additional-ability-card .ability-title,
+.charsheet .additional-ability-card .ability-rules,
+.charsheet .additional-ability-card .known-question {
+  display: none;
+}
+
+.charsheet .additional-ability-card .ability-unlocked-flag[value="1"] ~ .ability-title {
+  display: grid;
+}
+
+.charsheet .additional-ability-card .ability-unlocked-flag[value="1"] ~ .ability-title .ability-invoke-button {
+  display: flex;
+}
+
+.charsheet .additional-ability-card .ability-unlocked-flag[value="1"] ~ .ability-rules {
+  display: block;
+}
+
+.charsheet .additional-ability-card .ability-unlocked-flag[value="1"] ~ .known-question {
+  display: block;
+}
+
+.charsheet .additional-ability-access {
+  align-items: end;
+  background: #eef2fb;
+  display: none;
+  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: -6px 0 12px;
+  padding: 8px 12px;
+}
+
+.charsheet .additional-ability-card .ability-access-available-flag[value="1"] ~ .additional-ability-access {
+  display: grid;
+}
+
+.charsheet .additional-ability-card .ability-unlocked-flag[value="1"] ~ .additional-ability-access {
+  display: none;
+}
+
+.charsheet .additional-ability-access label {
+  align-items: center;
+  display: grid !important;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  margin: 0;
+  width: auto !important;
+}
+
+.charsheet .additional-ability-access label > span {
+  color: #064dbd;
+  font: 900 12px/1 var(--header-font);
+  text-transform: uppercase;
+}
+
+.charsheet .additional-ability-access input {
+  background: transparent;
+  border: 1px solid #9fb6ea;
+  border-radius: 0;
+  color: var(--ink);
+  font: 900 13px/1.2 var(--writein-font);
+  height: 28px;
+  margin: 0;
+  min-height: 28px;
+  padding: 4px 8px;
+  text-transform: uppercase;
   width: 100% !important;
 }
 
-.charsheet .ability-name-select option {
-  color: var(--ink);
-  font: 13px Arial, Helvetica, sans-serif;
+.charsheet .ability-unlock-button {
+  align-self: end;
+  background: #064dbd;
+  border: 1px solid #064dbd;
+  color: #fff;
+  cursor: pointer;
+  font: 900 12px/1 var(--header-font);
+  height: 28px;
+  min-height: 28px;
+  padding: 5px 10px;
+  text-transform: none;
+}
+
+.charsheet .ability-unlock-status {
+  color: #315aa5;
+  font: 900 11px/1.2 var(--writein-font);
+  grid-column: 1 / -1;
+  min-height: 13px;
 }
 
 .charsheet .ability-quality-badge {
