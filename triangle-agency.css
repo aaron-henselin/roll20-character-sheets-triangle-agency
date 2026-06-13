@@ -1731,11 +1731,40 @@ body.sheet-darkmode .charsheet .triangle-sheet .tab-label {
 
 .charsheet .quality-name {
   align-self: end;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  cursor: pointer;
   font-size: 18px;
   font-weight: 800;
   grid-area: name;
   line-height: 1;
+  margin: 0;
   margin-bottom: 2px;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.charsheet .ask-agency-quality-button:hover {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.charsheet .ask-agency-quality-button:focus:not(:hover) {
+  color: var(--ink);
+  outline: 0;
+  text-decoration: none;
+}
+
+.charsheet .ask-agency-quality-button:active {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .charsheet .qa-max {

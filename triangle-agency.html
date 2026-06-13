@@ -169,7 +169,7 @@
             <h2>Quality Assurances</h2>
             
       <div class="quality-row">
-        <div class="quality-name">Attentiveness</div>
+        <button type="action" name="act_ask_agency_attentiveness" class="quality-name ask-agency-quality-button" title="Ask the Agency with Attentiveness">Attentiveness</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -218,7 +218,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Duplicity</div>
+        <button type="action" name="act_ask_agency_duplicity" class="quality-name ask-agency-quality-button" title="Ask the Agency with Duplicity">Duplicity</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -267,7 +267,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Dynamism</div>
+        <button type="action" name="act_ask_agency_dynamism" class="quality-name ask-agency-quality-button" title="Ask the Agency with Dynamism">Dynamism</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -316,7 +316,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Empathy</div>
+        <button type="action" name="act_ask_agency_empathy" class="quality-name ask-agency-quality-button" title="Ask the Agency with Empathy">Empathy</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -365,7 +365,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Initiative</div>
+        <button type="action" name="act_ask_agency_initiative" class="quality-name ask-agency-quality-button" title="Ask the Agency with Initiative">Initiative</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -414,7 +414,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Persistence</div>
+        <button type="action" name="act_ask_agency_persistence" class="quality-name ask-agency-quality-button" title="Ask the Agency with Persistence">Persistence</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -463,7 +463,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Presence</div>
+        <button type="action" name="act_ask_agency_presence" class="quality-name ask-agency-quality-button" title="Ask the Agency with Presence">Presence</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -512,7 +512,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Professionalism</div>
+        <button type="action" name="act_ask_agency_professionalism" class="quality-name ask-agency-quality-button" title="Ask the Agency with Professionalism">Professionalism</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -561,7 +561,7 @@
       </div>
 
       <div class="quality-row">
-        <div class="quality-name">Subtlety</div>
+        <button type="action" name="act_ask_agency_subtlety" class="quality-name ask-agency-quality-button" title="Ask the Agency with Subtlety">Subtlety</button>
         <label class="qa-max">
           <span class="qa-max-triangle"></span>
           <span class="qa-max-label">MAX</span>
@@ -2464,21 +2464,7 @@ function updateAllAbilityBurnout() {
   }
 }
 
-function rollAbility(index) {
-  const attrNames = [
-    'character_name',
-    'ability_' + index + '_name',
-    'ability_' + index + '_quality',
-    'ability_' + index + '_quality_attr',
-    'ability_' + index + '_burnout',
-  ];
-
-  getAttrs(attrNames, function(values) {
-    const abilityName = values['ability_' + index + '_name'] || 'Ability ' + index;
-    const quality = values['ability_' + index + '_quality'] || 'Unspecified';
-    const burnout = Math.max(0, intValue(values['ability_' + index + '_burnout']));
-
-    const rollName = rollTemplateText((values.character_name ? values.character_name + ': ' : '') + abilityName);
+function rollQualityCheck(rollName, quality, burnout) {
     const rollQuality = rollTemplateText(quality);
     const command = '&{template:taability} ' +
       '{{name=' + rollName + '}} ' +
@@ -2534,6 +2520,35 @@ function rollAbility(index) {
         die_6_burned: burnedDice[5] || 0,
       });
     });
+}
+
+function rollAbility(index) {
+  const attrNames = [
+    'character_name',
+    'ability_' + index + '_name',
+    'ability_' + index + '_quality',
+    'ability_' + index + '_quality_attr',
+    'ability_' + index + '_burnout',
+  ];
+
+  getAttrs(attrNames, function(values) {
+    const abilityName = values['ability_' + index + '_name'] || 'Ability ' + index;
+    const quality = values['ability_' + index + '_quality'] || 'Unspecified';
+    const burnout = Math.max(0, intValue(values['ability_' + index + '_burnout']));
+    const rollName = rollTemplateText((values.character_name ? values.character_name + ': ' : '') + abilityName);
+    rollQualityCheck(rollName, quality, burnout);
+  });
+}
+
+function askTheAgency(quality, qualityAttr) {
+  const attrNames = ['character_name', qualityAttr + '_current', 'additional_burnout'];
+  getAttrs(attrNames, function(values) {
+    const currentQa = intValue(values[qualityAttr + '_current']);
+    const baseBurnout = currentQa <= 0 ? 1 : 0;
+    const additionalBurnout = Math.max(0, intValue(values.additional_burnout));
+    const burnout = baseBurnout + additionalBurnout;
+    const rollName = rollTemplateText((values.character_name ? values.character_name + ': ' : '') + 'Ask the Agency');
+    rollQualityCheck(rollName, quality, burnout);
   });
 }
 
@@ -2723,5 +2738,14 @@ on('clicked:ability_6_unlock', function(eventInfo) { setAdditionalAbility(6, eve
 on('clicked:ability_4_remove', function() { removeAdditionalAbility(4); });
 on('clicked:ability_5_remove', function() { removeAdditionalAbility(5); });
 on('clicked:ability_6_remove', function() { removeAdditionalAbility(6); });
+on('clicked:ask_agency_attentiveness', function() { askTheAgency('Attentiveness', 'attentiveness'); });
+on('clicked:ask_agency_duplicity', function() { askTheAgency('Duplicity', 'duplicity'); });
+on('clicked:ask_agency_dynamism', function() { askTheAgency('Dynamism', 'dynamism'); });
+on('clicked:ask_agency_empathy', function() { askTheAgency('Empathy', 'empathy'); });
+on('clicked:ask_agency_initiative', function() { askTheAgency('Initiative', 'initiative'); });
+on('clicked:ask_agency_persistence', function() { askTheAgency('Persistence', 'persistence'); });
+on('clicked:ask_agency_presence', function() { askTheAgency('Presence', 'presence'); });
+on('clicked:ask_agency_professionalism', function() { askTheAgency('Professionalism', 'professionalism'); });
+on('clicked:ask_agency_subtlety', function() { askTheAgency('Subtlety', 'subtlety'); });
 on('clicked:end_mission', endMission);
 </script>
