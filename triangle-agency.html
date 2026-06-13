@@ -2497,7 +2497,9 @@ function rollQualityCheck(rollName, quality, burnout) {
         return total + (burned ? 1 : 0);
       }, 0);
       const baseChaos = triscendence || finalThrees === 3 ? 0 : Math.max(0, 6 - finalThrees);
-      const chaosGenerated = baseChaos + actualBurned;
+      // Burned 3s already affect natural Chaos; only unspent Burnout becomes explicit Chaos.
+      const burnoutChaos = Math.max(0, appliedBurnout - actualBurned);
+      const chaosGenerated = baseChaos + burnoutChaos;
 
       finishRoll(results.rollId, {
         burnout,

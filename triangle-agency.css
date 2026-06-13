@@ -3419,6 +3419,12 @@ body.sheet-darkmode .charsheet .triangle-sheet .tab-label {
   gap: 5px;
 }
 
+.sheet-rolltemplate-taability .sheet-chaos-value .inlinerollresult {
+  background: #fffdf9;
+  border: 0;
+  color: #355ba2;
+}
+
 .sheet-rolltemplate-taability .sheet-chaos-mark {
   display: inline-block;
   font-family: "Pictos Custom";
